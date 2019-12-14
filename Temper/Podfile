@@ -8,6 +8,7 @@ target 'Temper' do
   # Pods for Temper
   pod 'Alamofire'
   pod 'Swinject'
+  pod 'RxSwift'
   
   target 'TemperTests' do
     inherit! :search_paths
