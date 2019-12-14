@@ -6,7 +6,8 @@ target 'Temper' do
   use_frameworks!
 
   # Pods for Temper
-
+  pod 'Alamofire'
+  
   target 'TemperTests' do
     inherit! :search_paths
     # Pods for testing
