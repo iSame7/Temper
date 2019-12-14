@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
 		5091443723A3C87000E7E791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091443523A3C87000E7E791 /* LaunchScreen.storyboard */; };
 		5091444223A3C87000E7E791 /* TemperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091444123A3C87000E7E791 /* TemperTests.swift */; };
+		50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */; };
 		5829583697994FF0131B48F3 /* Pods_TemperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3428D92716B0B1279B3EF4 /* Pods_TemperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		5091443D23A3C87000E7E791 /* TemperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091444123A3C87000E7E791 /* TemperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperTests.swift; sourceTree = "<group>"; };
 		5091444323A3C87000E7E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterTests.swift; sourceTree = "<group>"; };
 		CB3428D92716B0B1279B3EF4 /* Pods_TemperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TemperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4EBD0B4BAC24441A5C2C00 /* Pods-Temper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Temper.debug.xcconfig"; path = "Target Support Files/Pods-Temper/Pods-Temper.debug.xcconfig"; sourceTree = "<group>"; };
 		FD685CB6114E2CC556E30B6F /* Pods-TemperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperTests.debug.xcconfig"; path = "Target Support Files/Pods-TemperTests/Pods-TemperTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				5091444123A3C87000E7E791 /* TemperTests.swift */,
 				5091444323A3C87000E7E791 /* Info.plist */,
+				50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */,
 			);
 			path = TemperTests;
 			sourceTree = "<group>";
@@ -128,7 +131,6 @@
 				FD685CB6114E2CC556E30B6F /* Pods-TemperTests.debug.xcconfig */,
 				0822F683FE5440CFAC064533 /* Pods-TemperTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -310,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */,
 				5091444223A3C87000E7E791 /* TemperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
