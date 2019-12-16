@@ -10,7 +10,7 @@
 
 import UIKit.UIViewController
 
-private class JobsViewControllerMock: UIViewController, JobsViewable {
+class JobsViewControllerMock: UIViewController, JobsViewable {
     var invokedUpdate = false
     var invokedUpdateCount = 0
     var invokedUpdateParameters: (jobs: [Job], Void)?

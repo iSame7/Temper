@@ -8,7 +8,7 @@
 
 @testable import Temper
 
-private class JobsInteractorMock: JobsInteractable {
+class JobsInteractorMock: JobsInteractable {
     var invokedGetJobs = false
     var invokedGetJobsCount = 0
     var stubbedGetJobsCompletionResult: ([Job]?, Error?)?
