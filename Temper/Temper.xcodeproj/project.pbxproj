@@ -14,9 +14,10 @@
 		5091443223A3C86F00E7E791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091443023A3C86F00E7E791 /* Main.storyboard */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
 		5091443723A3C87000E7E791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091443523A3C87000E7E791 /* LaunchScreen.storyboard */; };
+		50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */; };
+		50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */; };
 		50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */; };
 		50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2623A67427007AA792 /* JobsViewController.swift */; };
-		50FA8E2A23A67DA5007AA792 /* TemperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091444123A3C87000E7E791 /* TemperTests.swift */; };
 		50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2C23A67DCB007AA792 /* JobsPresenter.swift */; };
 		50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2E23A67E1A007AA792 /* JobsPresentable.swift */; };
 		50FA8E3223A684D6007AA792 /* JobsInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E3123A684D6007AA792 /* JobsInteractable.swift */; };
@@ -50,8 +51,9 @@
 		5091443623A3C87000E7E791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5091443823A3C87000E7E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5091443D23A3C87000E7E791 /* TemperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5091444123A3C87000E7E791 /* TemperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperTests.swift; sourceTree = "<group>"; };
 		5091444323A3C87000E7E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerMock.swift; sourceTree = "<group>"; };
+		50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsInteractorMock.swift; sourceTree = "<group>"; };
 		50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterTests.swift; sourceTree = "<group>"; };
 		50FA8E2623A67427007AA792 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		50FA8E2C23A67DCB007AA792 /* JobsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenter.swift; sourceTree = "<group>"; };
@@ -126,10 +128,35 @@
 			isa = PBXGroup;
 			children = (
 				5091444323A3C87000E7E791 /* Info.plist */,
-				50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */,
-				5091444123A3C87000E7E791 /* TemperTests.swift */,
+				50CA8EE423A7BC9700A6DF65 /* Mocks */,
+				50CA8EE523A7BCA300A6DF65 /* Modules */,
 			);
 			path = TemperTests;
+			sourceTree = "<group>";
+		};
+		50CA8EE423A7BC9700A6DF65 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */,
+				50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		50CA8EE523A7BCA300A6DF65 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				50CA8EE623A7BCAC00A6DF65 /* Jobs */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		50CA8EE623A7BCAC00A6DF65 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */,
+			);
+			path = Jobs;
 			sourceTree = "<group>";
 		};
 		50FA8E2423A673F2007AA792 /* Modules */ = {
@@ -400,7 +427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50FA8E2A23A67DA5007AA792 /* TemperTests.swift in Sources */,
+				50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */,
+				50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */,
 				50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
