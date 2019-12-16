@@ -30,7 +30,7 @@ class JobsPresenterTests: XCTestCase {
     
     // MARK: - Tests
     
-    func testGetJobs() {
+    func testGetJobsAndInvokeUpdateWhenNewJobArrives() {
         // Given
         jobsInteractorMock.stubbedGetJobsCompletionResult = ([Job()], nil)
         
@@ -39,5 +39,16 @@ class JobsPresenterTests: XCTestCase {
         
         // Then
         XCTAssertTrue(jobsViewControllerMock.invokedUpdate)
+    }
+    
+    func testGetJobsAndInvokeErrorWhenNoJobArrives() {
+        // Given
+        jobsInteractorMock.stubbedGetJobsCompletionResult = (nil, NSError(domain:"", code: 400, userInfo:nil))
+        
+        // When
+        sut.getJobs()
+        
+        // Then
+        XCTAssertNotNil(jobsViewControllerMock.invokedShowError)
     }
 }
