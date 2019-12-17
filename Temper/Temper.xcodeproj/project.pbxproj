@@ -14,6 +14,11 @@
 		501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */; };
 		501C281F23A8E781007ECE6F /* TemperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281E23A8E781007ECE6F /* TemperError.swift */; };
 		501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282023A8EDD8007ECE6F /* TemperData.swift */; };
+		501C282323A8FE7F007ECE6F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282223A8FE7F007ECE6F /* Client.swift */; };
+		501C282523A8FE94007ECE6F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282423A8FE94007ECE6F /* Photo.swift */; };
+		501C282723A8FEAD007ECE6F /* JobCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282623A8FEAD007ECE6F /* JobCategory.swift */; };
+		501C282923A8FEBC007ECE6F /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282823A8FEBC007ECE6F /* Shift.swift */; };
+		501C282B23A8FED3007ECE6F /* TemperContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282A23A8FED3007ECE6F /* TemperContent.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091442F23A3C86F00E7E791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442E23A3C86F00E7E791 /* ViewController.swift */; };
@@ -58,6 +63,11 @@
 		501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extenstions.swift"; sourceTree = "<group>"; };
 		501C281E23A8E781007ECE6F /* TemperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperError.swift; sourceTree = "<group>"; };
 		501C282023A8EDD8007ECE6F /* TemperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperData.swift; sourceTree = "<group>"; };
+		501C282223A8FE7F007ECE6F /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		501C282423A8FE94007ECE6F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		501C282623A8FEAD007ECE6F /* JobCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategory.swift; sourceTree = "<group>"; };
+		501C282823A8FEBC007ECE6F /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		501C282A23A8FED3007ECE6F /* TemperContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperContent.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -314,7 +324,12 @@
 		50FA8E3A23A7A95A007AA792 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				501C282223A8FE7F007ECE6F /* Client.swift */,
 				50FA8E3B23A7A962007AA792 /* Job.swift */,
+				501C282623A8FEAD007ECE6F /* JobCategory.swift */,
+				501C282423A8FE94007ECE6F /* Photo.swift */,
+				501C282823A8FEBC007ECE6F /* Shift.swift */,
+				501C282A23A8FED3007ECE6F /* TemperContent.swift */,
 				501C282023A8EDD8007ECE6F /* TemperData.swift */,
 			);
 			path = Models;
@@ -510,8 +525,10 @@
 			files = (
 				50FA8E3623A6887F007AA792 /* JobsInteractor.swift in Sources */,
 				50FA8E3923A6892E007AA792 /* JobsService.swift in Sources */,
+				501C282B23A8FED3007ECE6F /* TemperContent.swift in Sources */,
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
 				50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */,
+				501C282523A8FE94007ECE6F /* Photo.swift in Sources */,
 				50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */,
 				50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */,
 				501C281323A8D919007ECE6F /* Config.swift in Sources */,
@@ -521,11 +538,14 @@
 				501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */,
 				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
+				501C282923A8FEBC007ECE6F /* Shift.swift in Sources */,
 				50FA8E3C23A7A962007AA792 /* Job.swift in Sources */,
 				50FA8E3E23A7ABF3007AA792 /* JobsViewable.swift in Sources */,
 				501C281723A8DAFB007ECE6F /* Constants.swift in Sources */,
+				501C282323A8FE7F007ECE6F /* Client.swift in Sources */,
 				5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */,
 				50FA8E3223A684D6007AA792 /* JobsInteractable.swift in Sources */,
+				501C282723A8FEAD007ECE6F /* JobCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

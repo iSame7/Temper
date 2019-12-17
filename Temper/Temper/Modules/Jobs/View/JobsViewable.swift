@@ -7,6 +7,6 @@
 //
 
 protocol JobsViewable {
-    func update(_ jobs: [Job])
+    func update(_ jobs: [String: [Job]])
     func showError(error: Error)
 }
