@@ -9,7 +9,7 @@
 import Alamofire
 
 protocol JobsFetching {
-    func fetchJobsFor(dates: String, completion: @escaping ([Job]?, Error?) -> Void)
+    func fetchJobsFor(dates: String, completion: @escaping ([String: [Job]]?, Error?) -> Void)
 }
 
 class JobsService: JobsFetching {
@@ -28,7 +28,13 @@ class JobsService: JobsFetching {
     
     // MARK: - JobsFetching
     
-    func fetchJobsFor(dates: String, completion: @escaping ([Job]?, Error?) -> Void) {
-        completion([Job()], nil)
+    func fetchJobsFor(dates: String, completion: @escaping ([String: [Job]]?, Error?) -> Void) {
+        sessionManager.request(Router.fetchJobs(dates: dates)).responseData { response in
+            let jsonDecoder = JSONDecoder()
+            jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+            let content: Result<TemperContent> = JSONDecoder().decodeResponse(from: response)
+            
+            completion(content.value?.data.periods, content.error)
+        }
     }
 }

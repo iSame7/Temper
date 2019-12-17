@@ -13,6 +13,7 @@
 		501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */; };
 		501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */; };
 		501C281F23A8E781007ECE6F /* TemperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281E23A8E781007ECE6F /* TemperError.swift */; };
+		501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282023A8EDD8007ECE6F /* TemperData.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091442F23A3C86F00E7E791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442E23A3C86F00E7E791 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestRetrier.swift; sourceTree = "<group>"; };
 		501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extenstions.swift"; sourceTree = "<group>"; };
 		501C281E23A8E781007ECE6F /* TemperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperError.swift; sourceTree = "<group>"; };
+		501C282023A8EDD8007ECE6F /* TemperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperData.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				50FA8E3B23A7A962007AA792 /* Job.swift */,
+				501C282023A8EDD8007ECE6F /* TemperData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */,
 				501C281F23A8E781007ECE6F /* TemperError.swift in Sources */,
 				5091442F23A3C86F00E7E791 /* ViewController.swift in Sources */,
+				501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */,
 				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
 				50FA8E3C23A7A962007AA792 /* Job.swift in Sources */,
