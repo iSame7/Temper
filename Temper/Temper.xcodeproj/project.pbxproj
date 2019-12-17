@@ -31,7 +31,6 @@
 		501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284823A97813007ECE6F /* NSObject+Util.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
-		5091442F23A3C86F00E7E791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442E23A3C86F00E7E791 /* ViewController.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
 		5091443723A3C87000E7E791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091443523A3C87000E7E791 /* LaunchScreen.storyboard */; };
 		50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A711E223A81C6900961415 /* NetworkRouter.swift */; };
@@ -90,7 +89,6 @@
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5091442E23A3C86F00E7E791 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5091443323A3C87000E7E791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5091443623A3C87000E7E791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5091443823A3C87000E7E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				50FA8E2423A673F2007AA792 /* Modules */,
 				5091442A23A3C86F00E7E791 /* AppDelegate.swift */,
 				5091442C23A3C86F00E7E791 /* SceneDelegate.swift */,
-				5091442E23A3C86F00E7E791 /* ViewController.swift */,
 				5091443323A3C87000E7E791 /* Assets.xcassets */,
 				5091443523A3C87000E7E791 /* LaunchScreen.storyboard */,
 				5091443823A3C87000E7E791 /* Info.plist */,
@@ -616,7 +613,6 @@
 				501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */,
 				501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */,
 				501C281F23A8E781007ECE6F /* TemperError.swift in Sources */,
-				5091442F23A3C86F00E7E791 /* ViewController.swift in Sources */,
 				501C283323A92BDA007ECE6F /* ModuleBuildable.swift in Sources */,
 				501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */,
 				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
