@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var window: UIWindow?
+    var jobsBuilder: ModuleBuildable!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window =  UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        if let jobsBuilder = Container.shared.resolve(ModuleBuildable.self), let window = self.window {
+            window.rootViewController = jobsBuilder.buildModule()?.viewController
+        }
         return true
     }
 

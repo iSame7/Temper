@@ -8,8 +8,10 @@
 
 import UIKit
 
-class JobsViewController: UIViewController {
+class JobsViewController {
+    // MARK: - Properties
     
+    var presenter: JobsPresentable!
 }
 
 // MARK: -

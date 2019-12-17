@@ -7,7 +7,6 @@
 //
 
 class JobsPresenter: JobsPresentable {
-    
     private let jobsInteractor: JobsInteractable
     private let jobsView: JobsViewable
     

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
-protocol JobsPresentable {
+protocol JobsPresentable: TemperPresentable {
     func getJobs()
 }
 
