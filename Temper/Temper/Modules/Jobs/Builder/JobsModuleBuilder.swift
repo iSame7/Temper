@@ -60,7 +60,7 @@ class JobsModuleBuidler: ModuleBuildable {
     
     private func registerView() {
         container.register(JobsViewable.self, factory: { _ in
-            JobsViewController()
+            JobsViewController.instantiate()
         }).initCompleted({ (r, view) in
             if let mapViewController = view as? JobsViewController {
                 mapViewController.presenter = r.resolve(JobsPresentable.self)!

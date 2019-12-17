@@ -8,10 +8,29 @@
 
 import UIKit
 
-class JobsViewController {
+class JobsViewController: UIViewController {
     // MARK: - Properties
     
     var presenter: JobsPresentable!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+}
+
+// MARK: - StoryboardInstantiatable
+extension JobsViewController: StoryboardInstantiatable {
+    static var instantiateType: StoryboardInstantiateType {
+        return .initial
+    }
+    
+    static var storyboardName: String {
+        return StoryboardName.jobs.rawValue
+    }
 }
 
 // MARK: -
