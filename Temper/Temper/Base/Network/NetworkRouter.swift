@@ -6,4 +6,42 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
-import Foundation
+import Alamofire
+
+enum Router: URLRequestConvertible {
+    case fetchJobs(dates: String)
+    
+    static let baseURLString = Constants.baseURL
+    
+    var method: HTTPMethod {
+        switch self {
+        case .fetchJobs:
+            return .get
+        }
+    }
+    
+    var path: String {
+        switch self {
+        case .fetchJobs:
+            return "contractor/shifts"
+        }
+    }
+    
+    var parameters: [String: AnyObject]? {
+        switch self {
+        case let .fetchJobs(dates):
+            return ["dates": dates] as [String: AnyObject]?
+        }
+    }
+    
+    func asURLRequest() throws -> URLRequest {
+        let url = try Router.baseURLString.asURL()
+        
+        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+        urlRequest.httpMethod = method.rawValue
+        
+        urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+        print("URL: \(String(describing: urlRequest.url))")
+        return urlRequest
+    }
+}

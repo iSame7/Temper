@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1789C0911D5D38D216B078DB /* Pods_Temper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCA082CACB0ECA0DDA7307C /* Pods_Temper.framework */; };
+		501C281323A8D919007ECE6F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281223A8D919007ECE6F /* Config.swift */; };
+		501C281723A8DAFB007ECE6F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281623A8DAFB007ECE6F /* Constants.swift */; };
+		501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */; };
+		501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */; };
+		501C281F23A8E781007ECE6F /* TemperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281E23A8E781007ECE6F /* TemperError.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091442F23A3C86F00E7E791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442E23A3C86F00E7E791 /* ViewController.swift */; };
 		5091443223A3C86F00E7E791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091443023A3C86F00E7E791 /* Main.storyboard */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
 		5091443723A3C87000E7E791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091443523A3C87000E7E791 /* LaunchScreen.storyboard */; };
+		50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A711E223A81C6900961415 /* NetworkRouter.swift */; };
 		50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */; };
 		50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */; };
 		50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */; };
@@ -42,6 +48,14 @@
 		0822F683FE5440CFAC064533 /* Pods-TemperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TemperTests.release.xcconfig"; path = "Target Support Files/Pods-TemperTests/Pods-TemperTests.release.xcconfig"; sourceTree = "<group>"; };
 		0D0A526C2337F66D758EFF72 /* Pods-Temper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Temper.release.xcconfig"; path = "Target Support Files/Pods-Temper/Pods-Temper.release.xcconfig"; sourceTree = "<group>"; };
 		3DCA082CACB0ECA0DDA7307C /* Pods_Temper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Temper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		500F2AEF23A8C1D500CCCAEA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		500F2AF023A8C1E200CCCAEA /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		501C281023A8D843007ECE6F /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		501C281223A8D919007ECE6F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		501C281623A8DAFB007ECE6F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestRetrier.swift; sourceTree = "<group>"; };
+		501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extenstions.swift"; sourceTree = "<group>"; };
+		501C281E23A8E781007ECE6F /* TemperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperError.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +66,7 @@
 		5091443823A3C87000E7E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5091443D23A3C87000E7E791 /* TemperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091444323A3C87000E7E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A711E223A81C6900961415 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerMock.swift; sourceTree = "<group>"; };
 		50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsInteractorMock.swift; sourceTree = "<group>"; };
 		50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterTests.swift; sourceTree = "<group>"; };
@@ -88,9 +103,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		500F2AED23A8C17500CCCAEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				500F2AEE23A8C1A400CCCAEA /* Config */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		500F2AEE23A8C1A400CCCAEA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				501C281023A8D843007ECE6F /* Common.xcconfig */,
+				500F2AEF23A8C1D500CCCAEA /* Production.xcconfig */,
+				500F2AF023A8C1E200CCCAEA /* Staging.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		501C281123A8D90F007ECE6F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				501C281D23A8E763007ECE6F /* Error Handler */,
+				501C281A23A8E577007ECE6F /* Extenstions */,
+				501C281423A8DAC6007ECE6F /* Config */,
+				501C281523A8DACD007ECE6F /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		501C281423A8DAC6007ECE6F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				501C281223A8D919007ECE6F /* Config.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		501C281523A8DACD007ECE6F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				501C281623A8DAFB007ECE6F /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		501C281A23A8E577007ECE6F /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		501C281D23A8E763007ECE6F /* Error Handler */ = {
+			isa = PBXGroup;
+			children = (
+				501C281E23A8E781007ECE6F /* TemperError.swift */,
+			);
+			path = "Error Handler";
+			sourceTree = "<group>";
+		};
 		5091441E23A3C86F00E7E791 = {
 			isa = PBXGroup;
 			children = (
+				501C281123A8D90F007ECE6F /* Common */,
+				500F2AED23A8C17500CCCAEA /* Resources */,
 				5091442923A3C86F00E7E791 /* Temper */,
 				5091444023A3C87000E7E791 /* TemperTests */,
 				5091442823A3C86F00E7E791 /* Products */,
@@ -111,6 +189,7 @@
 		5091442923A3C86F00E7E791 /* Temper */ = {
 			isa = PBXGroup;
 			children = (
+				50A711DC23A7D59B00961415 /* Base */,
 				50FA8E3A23A7A95A007AA792 /* Models */,
 				50FA8E2423A673F2007AA792 /* Modules */,
 				5091442A23A3C86F00E7E791 /* AppDelegate.swift */,
@@ -132,6 +211,23 @@
 				50CA8EE523A7BCA300A6DF65 /* Modules */,
 			);
 			path = TemperTests;
+			sourceTree = "<group>";
+		};
+		50A711DC23A7D59B00961415 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				50A711DD23A7D5A600961415 /* Network */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		50A711DD23A7D5A600961415 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */,
+				50A711E223A81C6900961415 /* NetworkRouter.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		50CA8EE423A7BC9700A6DF65 /* Mocks */ = {
@@ -414,10 +510,16 @@
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
 				50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */,
 				50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */,
+				50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */,
+				501C281323A8D919007ECE6F /* Config.swift in Sources */,
+				501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */,
+				501C281F23A8E781007ECE6F /* TemperError.swift in Sources */,
 				5091442F23A3C86F00E7E791 /* ViewController.swift in Sources */,
+				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
 				50FA8E3C23A7A962007AA792 /* Job.swift in Sources */,
 				50FA8E3E23A7ABF3007AA792 /* JobsViewable.swift in Sources */,
+				501C281723A8DAFB007ECE6F /* Constants.swift in Sources */,
 				5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */,
 				50FA8E3223A684D6007AA792 /* JobsInteractable.swift in Sources */,
 			);
@@ -465,6 +567,7 @@
 /* Begin XCBuildConfiguration section */
 		5091444423A3C87000E7E791 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 500F2AF023A8C1E200CCCAEA /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -525,6 +628,7 @@
 		};
 		5091444523A3C87000E7E791 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 500F2AEF23A8C1D500CCCAEA /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

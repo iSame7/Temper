@@ -21,6 +21,6 @@ class JobsInteractor: JobsInteractable {
     // MARK: - JobsInteractable
     
     func getJobs(completion: @escaping ([Job]?, Error?) -> Void) {
-        jobsService.fetchJobs(completion: completion)
+        jobsService.fetchJobsFor(dates: "", completion: completion)
     }
 }

@@ -6,12 +6,29 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
+import Alamofire
+
 protocol JobsFetching {
-    func fetchJobs(completion: @escaping ([Job]?, Error?) -> Void)
+    func fetchJobsFor(dates: String, completion: @escaping ([Job]?, Error?) -> Void)
 }
 
 class JobsService: JobsFetching {
-    func fetchJobs(completion: @escaping ([Job]?, Error?) -> Void) {
+    
+    // MARK: - Private properties
+    
+    let sessionManager: SessionManager
+    let requestRetrier: RequestRetrier
+    
+    // MARK: - Init
+    
+    init(sessionManager: SessionManager, requestRetrier: RequestRetrier) {
+        self.sessionManager = sessionManager
+        self.requestRetrier = requestRetrier
+    }
+    
+    // MARK: - JobsFetching
+    
+    func fetchJobsFor(dates: String, completion: @escaping ([Job]?, Error?) -> Void) {
         completion([Job()], nil)
     }
 }

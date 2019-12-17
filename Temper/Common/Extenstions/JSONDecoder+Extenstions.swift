@@ -5,5 +5,26 @@
 //  Created by Sameh Mabrouk on 17/12/2019.
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
-
 import Foundation
+import Alamofire
+
+/// Generic function to handle Alamofire responses into our Codable types until Alamofire support it.
+/// https://github.com/Alamofire/Alamofire/issues/2180
+extension JSONDecoder {
+    func decodeResponse<T: Decodable>(from response: DataResponse<Data>) -> Result<T> {
+        guard response.error == nil else {
+            return .failure(response.error!)
+        }
+        
+        guard let responseData = response.data else {
+            return .failure(TemperError.JSONParsing)
+        }
+        
+        do {
+            let item = try decode(T.self, from: responseData)
+            return .success(item)
+        } catch {
+            return .failure(error)
+        }
+    }
+}
