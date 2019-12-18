@@ -1,11 +1,13 @@
 PODS:
   - Alamofire (4.9.1)
+  - Nuke (8.4.0)
   - RxSwift (5.0.1)
   - SwiftGen (6.1.0)
   - Swinject (2.7.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Nuke
   - RxSwift
   - SwiftGen
   - Swinject
@@ -13,16 +15,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Nuke
     - RxSwift
     - SwiftGen
     - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Nuke: fa6f784c4f7e1c0f9313668510186c68b7af2509
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 4615b43b2a5c59abf67b44da0eaed40f7ab9e875
+PODFILE CHECKSUM: 81251873db7ae2d2bfda7a81f67d78533cccbae6
 
 COCOAPODS: 1.8.4
