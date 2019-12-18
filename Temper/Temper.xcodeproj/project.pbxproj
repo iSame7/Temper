@@ -30,7 +30,7 @@
 		501C284723A977F5007ECE6F /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284623A977F5007ECE6F /* StoryboardInstantiatable.swift */; };
 		501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284823A97813007ECE6F /* NSObject+Util.swift */; };
 		501C284B23A9817B007ECE6F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284A23A9817B007ECE6F /* Router.swift */; };
-		501C285023AA23F8007ECE6F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284F23AA23F8007ECE6F /* AppRouter.swift */; };
+		501C285223AA365D007ECE6F /* JobsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C285123AA365D007ECE6F /* JobsRouter.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -89,7 +89,7 @@
 		501C284623A977F5007ECE6F /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		501C284823A97813007ECE6F /* NSObject+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Util.swift"; sourceTree = "<group>"; };
 		501C284A23A9817B007ECE6F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		501C284F23AA23F8007ECE6F /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		501C285123AA365D007ECE6F /* JobsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRouter.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,22 +257,7 @@
 		501C284C23A982B2007ECE6F /* Router */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		501C284D23AA23E6007ECE6F /* App */ = {
-			isa = PBXGroup;
-			children = (
-				501C284E23AA23F0007ECE6F /* Router */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		501C284E23AA23F0007ECE6F /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				501C284F23AA23F8007ECE6F /* AppRouter.swift */,
+				501C285123AA365D007ECE6F /* JobsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -369,7 +354,6 @@
 		50FA8E2423A673F2007AA792 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				501C284D23AA23E6007ECE6F /* App */,
 				50FA8E2523A67402007AA792 /* Jobs */,
 			);
 			path = Modules;
@@ -636,6 +620,7 @@
 				501C284B23A9817B007ECE6F /* Router.swift in Sources */,
 				501C282523A8FE94007ECE6F /* Photo.swift in Sources */,
 				501C284523A977E7007ECE6F /* StoryboardInstantiateType.swift in Sources */,
+				501C285223AA365D007ECE6F /* JobsRouter.swift in Sources */,
 				50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */,
 				50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */,
 				501C282F23A92AFF007ECE6F /* TemperModule.swift in Sources */,
@@ -654,7 +639,6 @@
 				50FA8E3E23A7ABF3007AA792 /* JobsViewable.swift in Sources */,
 				501C281723A8DAFB007ECE6F /* Constants.swift in Sources */,
 				501C282323A8FE7F007ECE6F /* Client.swift in Sources */,
-				501C285023AA23F8007ECE6F /* AppRouter.swift in Sources */,
 				5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */,
 				50FA8E3223A684D6007AA792 /* JobsInteractable.swift in Sources */,
 				501C282723A8FEAD007ECE6F /* JobCategory.swift in Sources */,

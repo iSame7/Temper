@@ -13,12 +13,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var jobsBuilder: ModuleBuildable!
-    var appRouter: AppRouter!
+    var appRouter: JobsRouter!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             window = UIWindow(windowScene: windowScene)
-            appRouter = AppRouter(window: window, jobsBuilder: Container.shared.resolve(ModuleBuildable.self))
+            appRouter = JobsRouter(window: window, jobsBuilder: Container.shared.resolve(ModuleBuildable.self))
             appRouter.start()
         }
     }
