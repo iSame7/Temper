@@ -32,7 +32,7 @@ class JobsService: JobsFetching {
         sessionManager.request(NetworkRouter.fetchJobs(dates: dates)).responseData { response in
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-            let content: Result<TemperContent> = JSONDecoder().decodeResponse(from: response)
+            let content: Result<TemperContent> = jsonDecoder.decodeResponse(from: response)
             
             completion(content.value?.data.periods, content.error)
         }

@@ -26,8 +26,7 @@ class JobsModuleBuidler: ModuleBuildable {
         registerNetwork()
         
         guard let jobsViewController = container.resolve(JobsViewable.self) as? UIViewController  else { return nil }
-        let navController = UINavigationController(rootViewController: jobsViewController)
-        return Temper.Module(viewController: navController)
+        return Temper.Module(viewController: jobsViewController)
     }
     
     private func registerInteractor() {

@@ -7,6 +7,12 @@
 //
 
 protocol JobsPresentable: TemperPresentable {
+    var jobs: [String: [Job]]? { get }
+    
     func getJobs()
+    func getMoreJobs()
+    
+    func numberOfItemsInSection(index: Int) -> Int
+    func buildCardContentViewModels() -> [CardContentViewModel]
 }
 
