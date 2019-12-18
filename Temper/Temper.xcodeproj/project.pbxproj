@@ -29,6 +29,8 @@
 		501C284523A977E7007ECE6F /* StoryboardInstantiateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284423A977E7007ECE6F /* StoryboardInstantiateType.swift */; };
 		501C284723A977F5007ECE6F /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284623A977F5007ECE6F /* StoryboardInstantiatable.swift */; };
 		501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284823A97813007ECE6F /* NSObject+Util.swift */; };
+		501C284B23A9817B007ECE6F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284A23A9817B007ECE6F /* Router.swift */; };
+		501C285023AA23F8007ECE6F /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C284F23AA23F8007ECE6F /* AppRouter.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -86,6 +88,8 @@
 		501C284423A977E7007ECE6F /* StoryboardInstantiateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiateType.swift; sourceTree = "<group>"; };
 		501C284623A977F5007ECE6F /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		501C284823A97813007ECE6F /* NSObject+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Util.swift"; sourceTree = "<group>"; };
+		501C284A23A9817B007ECE6F /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		501C284F23AA23F8007ECE6F /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,13 +156,14 @@
 		501C281123A8D90F007ECE6F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				501C283D23A972B8007ECE6F /* Dependency Injection */,
-				501C283423A936BB007ECE6F /* TableView */,
 				501C281423A8DAC6007ECE6F /* Config */,
 				501C281523A8DACD007ECE6F /* Constants */,
+				501C283D23A972B8007ECE6F /* Dependency Injection */,
 				501C281D23A8E763007ECE6F /* Error Handler */,
 				501C281A23A8E577007ECE6F /* Extenstions */,
 				501C282D23A92AEF007ECE6F /* Module */,
+				501C283423A936BB007ECE6F /* TableView */,
+				501C284323A977DD007ECE6F /* Utils */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				501C284123A976B2007ECE6F /* Jobs.storyboard */,
+				5091443523A3C87000E7E791 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -241,19 +247,39 @@
 		501C284323A977DD007ECE6F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				501C284423A977E7007ECE6F /* StoryboardInstantiateType.swift */,
+				501C284A23A9817B007ECE6F /* Router.swift */,
 				501C284623A977F5007ECE6F /* StoryboardInstantiatable.swift */,
+				501C284423A977E7007ECE6F /* StoryboardInstantiateType.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		501C284C23A982B2007ECE6F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		501C284D23AA23E6007ECE6F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				501C284E23AA23F0007ECE6F /* Router */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		501C284E23AA23F0007ECE6F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				501C284F23AA23F8007ECE6F /* AppRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		5091441E23A3C86F00E7E791 = {
 			isa = PBXGroup;
 			children = (
-				501C284323A977DD007ECE6F /* Utils */,
-				501C284023A9767D007ECE6F /* Storyboards */,
-				501C281123A8D90F007ECE6F /* Common */,
-				500F2AED23A8C17500CCCAEA /* Resources */,
 				5091442923A3C86F00E7E791 /* Temper */,
 				5091444023A3C87000E7E791 /* TemperTests */,
 				5091442823A3C86F00E7E791 /* Products */,
@@ -274,13 +300,15 @@
 		5091442923A3C86F00E7E791 /* Temper */ = {
 			isa = PBXGroup;
 			children = (
+				501C284023A9767D007ECE6F /* Storyboards */,
+				501C281123A8D90F007ECE6F /* Common */,
+				500F2AED23A8C17500CCCAEA /* Resources */,
 				50A711DC23A7D59B00961415 /* Base */,
 				50FA8E3A23A7A95A007AA792 /* Models */,
 				50FA8E2423A673F2007AA792 /* Modules */,
 				5091442A23A3C86F00E7E791 /* AppDelegate.swift */,
 				5091442C23A3C86F00E7E791 /* SceneDelegate.swift */,
 				5091443323A3C87000E7E791 /* Assets.xcassets */,
-				5091443523A3C87000E7E791 /* LaunchScreen.storyboard */,
 				5091443823A3C87000E7E791 /* Info.plist */,
 			);
 			path = Temper;
@@ -341,6 +369,7 @@
 		50FA8E2423A673F2007AA792 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				501C284D23AA23E6007ECE6F /* App */,
 				50FA8E2523A67402007AA792 /* Jobs */,
 			);
 			path = Modules;
@@ -350,9 +379,10 @@
 			isa = PBXGroup;
 			children = (
 				501C282C23A92A97007ECE6F /* Builder */,
-				50FA8E3723A68914007AA792 /* Services */,
 				50FA8E3023A683A4007AA792 /* Interactor */,
 				50FA8E2B23A67DB7007AA792 /* Presenter */,
+				501C284C23A982B2007ECE6F /* Router */,
+				50FA8E3723A68914007AA792 /* Services */,
 				50FA8E2823A67D88007AA792 /* View */,
 			);
 			path = Jobs;
@@ -603,6 +633,7 @@
 				501C282B23A8FED3007ECE6F /* TemperContent.swift in Sources */,
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
 				50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */,
+				501C284B23A9817B007ECE6F /* Router.swift in Sources */,
 				501C282523A8FE94007ECE6F /* Photo.swift in Sources */,
 				501C284523A977E7007ECE6F /* StoryboardInstantiateType.swift in Sources */,
 				50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */,
@@ -623,6 +654,7 @@
 				50FA8E3E23A7ABF3007AA792 /* JobsViewable.swift in Sources */,
 				501C281723A8DAFB007ECE6F /* Constants.swift in Sources */,
 				501C282323A8FE7F007ECE6F /* Client.swift in Sources */,
+				501C285023AA23F8007ECE6F /* AppRouter.swift in Sources */,
 				5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */,
 				50FA8E3223A684D6007AA792 /* JobsInteractable.swift in Sources */,
 				501C282723A8FEAD007ECE6F /* JobCategory.swift in Sources */,

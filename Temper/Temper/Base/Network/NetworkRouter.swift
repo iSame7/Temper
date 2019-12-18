@@ -8,7 +8,7 @@
 
 import Alamofire
 
-enum Router: URLRequestConvertible {
+enum NetworkRouter: URLRequestConvertible {
     case fetchJobs(dates: String)
     
     static let baseURLString = Constants.baseURL
@@ -35,7 +35,7 @@ enum Router: URLRequestConvertible {
     }
     
     func asURLRequest() throws -> URLRequest {
-        let url = try Router.baseURLString.asURL()
+        let url = try NetworkRouter.baseURLString.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue

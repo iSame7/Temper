@@ -29,7 +29,7 @@ class JobsService: JobsFetching {
     // MARK: - JobsFetching
     
     func fetchJobsFor(dates: String, completion: @escaping ([String: [Job]]?, Error?) -> Void) {
-        sessionManager.request(Router.fetchJobs(dates: dates)).responseData { response in
+        sessionManager.request(NetworkRouter.fetchJobs(dates: dates)).responseData { response in
             let jsonDecoder = JSONDecoder()
             jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
             let content: Result<TemperContent> = JSONDecoder().decodeResponse(from: response)
