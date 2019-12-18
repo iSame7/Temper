@@ -10,6 +10,7 @@ target 'Temper' do
   pod 'Swinject'
   pod 'RxSwift'
   pod 'SwiftGen'
+  pod 'Nuke'
   
   target 'TemperTests' do
     inherit! :search_paths
