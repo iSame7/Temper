@@ -48,6 +48,7 @@
 		501C288523AA516A007ECE6F /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288423AA516A007ECE6F /* SectionHeader.swift */; };
 		501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288623AA812A007ECE6F /* Date+Extenstions.swift */; };
 		501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288823AB142E007ECE6F /* String+Extenstions.swift */; };
+		501C288B23AB9A7B007ECE6F /* SectionJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288A23AB9A7B007ECE6F /* SectionJob.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		501C288423AA516A007ECE6F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		501C288623AA812A007ECE6F /* Date+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extenstions.swift"; sourceTree = "<group>"; };
 		501C288823AB142E007ECE6F /* String+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extenstions.swift"; sourceTree = "<group>"; };
+		501C288A23AB9A7B007ECE6F /* SectionJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionJob.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -497,6 +499,7 @@
 				50FA8E3B23A7A962007AA792 /* Job.swift */,
 				501C282623A8FEAD007ECE6F /* JobCategory.swift */,
 				501C282423A8FE94007ECE6F /* Photo.swift */,
+				501C288A23AB9A7B007ECE6F /* SectionJob.swift */,
 				501C282823A8FEBC007ECE6F /* Shift.swift */,
 				501C282A23A8FED3007ECE6F /* TemperContent.swift */,
 				501C282023A8EDD8007ECE6F /* TemperData.swift */,
@@ -735,6 +738,7 @@
 				501C284723A977F5007ECE6F /* StoryboardInstantiatable.swift in Sources */,
 				50FA8E3C23A7A962007AA792 /* Job.swift in Sources */,
 				50FA8E3E23A7ABF3007AA792 /* JobsViewable.swift in Sources */,
+				501C288B23AB9A7B007ECE6F /* SectionJob.swift in Sources */,
 				501C281723A8DAFB007ECE6F /* Constants.swift in Sources */,
 				501C282323A8FE7F007ECE6F /* Client.swift in Sources */,
 				501C288323AA46C7007ECE6F /* CardDetailViewController.swift in Sources */,

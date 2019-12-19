@@ -19,8 +19,13 @@ class JobsInteractor: JobsInteractable {
     }
     
     // MARK: - JobsInteractable
-    
-    func getJobsFor(dates: String, completion: @escaping ([String : [Job]]?, Error?) -> Void) {
-        jobsService.fetchJobsFor(dates: dates, completion: completion)
+    func getJobsFor(dates: String, completion: @escaping ([SectionJob]?, Error?) -> Void) {
+        jobsService.fetchJobsFor(dates: dates) { (jobs, error) in
+            var allJobs = [SectionJob]()
+            jobs?.sorted() { $0.key < $1.key }.forEach { (key, value)  in
+                allJobs.append(SectionJob(section: key, jobs: value))
+            }
+            completion(allJobs, error)
+        }
     }
 }

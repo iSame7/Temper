@@ -28,10 +28,14 @@ struct TemperData: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CustomCodingKeys.self)
 
-        self.periods = [String: [Job]]()
+        periods = [String: [Job]]()
         for key in container.allKeys.sorted() {
-            let value = try container.decode([Job].self, forKey: CustomCodingKeys(stringValue: key.stringValue)!)
-            self.periods[key.stringValue] = value
+            guard let customeCodingkey = CustomCodingKeys(stringValue: key.stringValue) else {
+                return
+            }
+            
+            let value = try container.decode([Job].self, forKey: customeCodingkey)
+            periods[key.stringValue] = value
         }
     }
 }

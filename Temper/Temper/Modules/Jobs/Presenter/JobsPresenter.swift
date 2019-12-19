@@ -30,7 +30,11 @@ class JobsPresenter: JobsPresentable {
         return dates
     }
     
-    var jobs: [String: [Job]]?
+    var jobs: [SectionJob]?{
+        didSet {
+            jobsView.update()
+        }
+    }
     
     // MARK: - Init
     
@@ -43,7 +47,6 @@ class JobsPresenter: JobsPresentable {
         jobsInteractor.getJobsFor(dates: jobDaystoLoad) { [weak self] (jobs, error) in
             if let jobs = jobs {
                 self?.jobs = jobs
-                self?.jobsView.update(jobs)
             } else if let error = error {
                 self?.jobsView.showError(error: error)
             }
@@ -55,25 +58,29 @@ class JobsPresenter: JobsPresentable {
         
         getJobs()
     }
-    
-    func sectionHeaderAt(index: Int) -> String? {
-        guard let jobs = jobs else { return nil }
+
+    func numberOfSections() -> Int {
+        guard let jobs = jobs else { return 0 }
         
-        let formattedStringDate = Array(jobs.keys)[index].toDate()?.toString(format: "EEEE dd MMMM")
-        return formattedStringDate
+        return jobs.count
     }
     
     func numberOfItemsInSection(index: Int) -> Int {
         guard let jobs = jobs else { return 0 }
         
-        return Array(jobs.values)[index].count
+        return jobs[index].jobs.count
+    }
+        
+    func sectionHeaderAt(index: Int) -> String? {
+        guard let jobs = jobs else { return nil }
+        let formattedStringDate = jobs[index].section.toDate()?.toString(format: "EEEE dd MMMM")
+        return formattedStringDate
     }
     
     func itemsAt(section: Int) -> [CardContentViewModel]? {
         guard let jobs = jobs else { return nil }
         
-        let key = Array(jobs.keys)[section]
-        guard let jobsAtSection = jobs[key] else { return nil }
+        let jobsAtSection = jobs[section].jobs
         
         var cardContentViewModels = [CardContentViewModel]()
         jobsAtSection.forEach { job in
@@ -92,21 +99,5 @@ class JobsPresenter: JobsPresentable {
     
     func itemAtIndex(index: Int, in section: Int) -> CardContentViewModel? {
         return itemsAt(section: section)?[index]
-    }
-    
-    func buildCardContentViewModels() -> [CardContentViewModel] {
-        var cardContentViewModels = [CardContentViewModel]()
-        jobs?.values.flatMap({$0}).forEach({ job in
-            let shifts: String
-            if let startTime = job.shifts.first?.startTime, let endTime = job.shifts.first?.endTime {
-                shifts = startTime + "-" + endTime
-            } else {
-                shifts = "No available shift"
-                assertionFailure("No shifts available for this job\(job.jobCategory.description)")
-            }
-            cardContentViewModels.append(CardContentViewModel(primary: job.jobCategory.description, secondary: job.client.name, description: shifts, image: job.client.photos.first?.formats?.first?.cdnUrl ?? ""))
-        })  
-        
-        return cardContentViewModels
     }
 }

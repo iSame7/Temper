@@ -71,7 +71,7 @@ extension JobsViewController: StoryboardInstantiatable {
 // MARK: - JobsViewable
 
 extension JobsViewController: JobsViewable {
-    func update(_ jobs: [String : [Job]]) {
+    func update() {
         collectionView.reloadData()
     }
     
@@ -81,7 +81,7 @@ extension JobsViewController: JobsViewable {
 
 extension JobsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return presenter.jobs?.keys.count ?? 0
+        return presenter.numberOfSections()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -97,7 +97,7 @@ extension JobsViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.cardContentView.viewModel = presenter.itemAtIndex(index: indexPath.item, in: indexPath.section)
         
         // Pagination e.g. load more jobs when scrolling at the bottom of the collection view
-        if let itemsAtSection = presenter.itemsAt(section: indexPath.section), indexPath.row == itemsAtSection.count - 1, let keyCount = presenter.jobs?.keys.count, indexPath.section == keyCount - 1 {
+        if let itemsAtSection = presenter.itemsAt(section: indexPath.section), indexPath.row == itemsAtSection.count - 1, indexPath.section == presenter.numberOfSections() - 1 {
             presenter.getMoreJobs()
         }
     }
