@@ -58,6 +58,12 @@ class JobsPresenter: JobsPresentable {
         
         getJobs()
     }
+    
+    func refreshJobs() {
+        jobsLimit = 0
+        
+        getJobs()
+    }
 
     func numberOfSections() -> Int {
         guard let jobs = jobs else { return 0 }

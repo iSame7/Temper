@@ -11,6 +11,7 @@ protocol JobsPresentable: TemperPresentable {
     
     func getJobs()
     func getMoreJobs()
+    func refreshJobs()
     
     func numberOfSections() -> Int
     func numberOfItemsInSection(index: Int) -> Int

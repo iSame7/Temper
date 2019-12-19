@@ -12,8 +12,9 @@ class JobsViewController: StatusBarAnimatableViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet private weak var collectionView: UICollectionView!
+    private let refreshControl = UIRefreshControl()
+    
     // MARK: - Properties
     
     var presenter: JobsPresentable!
@@ -41,6 +42,10 @@ class JobsViewController: StatusBarAnimatableViewController {
         // Make it responds to highlight state faster
         collectionView.delaysContentTouches = false
         
+        refreshControl.addTarget(self, action: #selector(refreshJobList), for: .valueChanged)
+
+        collectionView.refreshControl = refreshControl
+        
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.minimumLineSpacing = 20
             layout.minimumInteritemSpacing = 0
@@ -54,6 +59,9 @@ class JobsViewController: StatusBarAnimatableViewController {
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: "sectionHeader")
     }
     
+    @objc func refreshJobList() {
+        presenter.refreshJobs()
+    }
 }
 
 // MARK: - StoryboardInstantiatable
@@ -72,6 +80,10 @@ extension JobsViewController: StoryboardInstantiatable {
 
 extension JobsViewController: JobsViewable {
     func update() {
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
+        
         collectionView.reloadData()
     }
     
