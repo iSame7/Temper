@@ -76,7 +76,9 @@ extension JobsViewController: PullToRefreshActionHandling {
         get {
             return collectionView.refreshControl
         }
-        set {}
+        set {
+            collectionView.refreshControl = newValue
+        }
     }
     
     func refreshControlValueChanged() {
