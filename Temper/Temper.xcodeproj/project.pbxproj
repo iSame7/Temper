@@ -47,6 +47,7 @@
 		501C288323AA46C7007ECE6F /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288223AA46C7007ECE6F /* CardDetailViewController.swift */; };
 		501C288523AA516A007ECE6F /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288423AA516A007ECE6F /* SectionHeader.swift */; };
 		501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288623AA812A007ECE6F /* Date+Extenstions.swift */; };
+		501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288823AB142E007ECE6F /* String+Extenstions.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -122,6 +123,7 @@
 		501C288223AA46C7007ECE6F /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		501C288423AA516A007ECE6F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		501C288623AA812A007ECE6F /* Date+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extenstions.swift"; sourceTree = "<group>"; };
+		501C288823AB142E007ECE6F /* String+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extenstions.swift"; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				501C287923AA3F70007ECE6F /* UIView+AutoLayout.swift */,
 				501C287B23AA4006007ECE6F /* NibLoadable.swift */,
 				501C288623AA812A007ECE6F /* Date+Extenstions.swift */,
+				501C288823AB142E007ECE6F /* String+Extenstions.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -453,9 +456,9 @@
 		50FA8E2823A67D88007AA792 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				50FA8E2623A67427007AA792 /* JobsViewController.swift */,
-				50FA8E3D23A7ABF3007AA792 /* JobsViewable.swift */,
 				501C288223AA46C7007ECE6F /* CardDetailViewController.swift */,
+				50FA8E3D23A7ABF3007AA792 /* JobsViewable.swift */,
+				50FA8E2623A67427007AA792 /* JobsViewController.swift */,
 				501C288423AA516A007ECE6F /* SectionHeader.swift */,
 			);
 			path = View;
@@ -716,6 +719,7 @@
 				501C281323A8D919007ECE6F /* Config.swift in Sources */,
 				501C283A23A96666007ECE6F /* TemperBaseViewController.swift in Sources */,
 				501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */,
+				501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */,
 				501C286323AA3BB6007ECE6F /* CardTransition.swift in Sources */,
 				501C287823AA3EB7007ECE6F /* CardContentViewModel.swift in Sources */,
 				501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */,
@@ -894,15 +898,18 @@
 			baseConfigurationReference = EF4EBD0B4BAC24441A5C2C00 /* Pods-Temper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U3N7M58T5;
 				INFOPLIST_FILE = Temper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smapps.Temper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -913,15 +920,18 @@
 			baseConfigurationReference = 0D0A526C2337F66D758EFF72 /* Pods-Temper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U3N7M58T5;
 				INFOPLIST_FILE = Temper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smapps.Temper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -7,16 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F58793E2-5FD6-4430-A5B6-963BBD4A00D5"
+            uuid = "23C9126B-CCD7-4A92-B90E-E673B7755ACF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Temper/Modules/Jobs/Presenter/JobsPresenter.swift"
+            filePath = "Temper/Modules/Jobs/View/JobsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "numberOfItemsInSection(index:)"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "collectionView(_:willDisplay:forItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40F0A3FA-D8A8-4997-98D1-075859295346"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            condition = "indexPath.section == 1"
+            continueAfterRunningActions = "No"
+            filePath = "Temper/Modules/Jobs/View/JobsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

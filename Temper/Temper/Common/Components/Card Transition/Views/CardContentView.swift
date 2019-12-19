@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 @IBDesignable class CardContentView: UIView, NibLoadable {
 
@@ -39,7 +40,9 @@ import UIKit
             primaryLabel.text = viewModel?.primary
             secondaryLabel.text = viewModel?.secondary
             detailLabel.text = viewModel?.description
-            imageView.image = viewModel?.image
+            if let imageStringURL = viewModel?.image, let imageURL = URL(string: imageStringURL) {
+                Nuke.loadImage(with: imageURL, options: ImageLoadingOptions(contentModes: .init(success: .scaleAspectFill, failure: .scaleAspectFill, placeholder: .scaleAspectFill)), into: imageView)
+            }
         }
     }
 

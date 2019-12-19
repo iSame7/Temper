@@ -9,14 +9,19 @@
 struct TemperData: Decodable {
     var periods: [String: [Job]]
     
-    private struct CustomCodingKeys: CodingKey {
+    private struct CustomCodingKeys: CodingKey, Comparable {
         var stringValue: String
         init?(stringValue: String) {
             self.stringValue = stringValue
         }
+
         var intValue: Int?
         init?(intValue: Int) {
             return nil
+        }
+        
+        public static func < (lhs: CustomCodingKeys, rhs: CustomCodingKeys) -> Bool {
+            return lhs.stringValue < rhs.stringValue
         }
     }
     
@@ -24,7 +29,7 @@ struct TemperData: Decodable {
         let container = try decoder.container(keyedBy: CustomCodingKeys.self)
 
         self.periods = [String: [Job]]()
-        for key in container.allKeys {
+        for key in container.allKeys.sorted() {
             let value = try container.decode([Job].self, forKey: CustomCodingKeys(stringValue: key.stringValue)!)
             self.periods[key.stringValue] = value
         }

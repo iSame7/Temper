@@ -14,7 +14,21 @@ class JobsPresenter: JobsPresentable {
     
     private let jobsInteractor: JobsInteractable
     private let jobsView: JobsViewable
+    
     private var jobsLimit = 0
+    private var jobDaystoLoad: String {
+        var dates = Date().toString()
+        if jobsLimit > 1 {
+            for day in 1..<jobsLimit {
+                guard let newDate =  Date().add(days: day)?.toString() else {
+                    continue
+                }
+                dates += ",\(newDate)"
+            }
+        }
+        
+        return dates
+    }
     
     var jobs: [String: [Job]]?
     
@@ -26,11 +40,7 @@ class JobsPresenter: JobsPresentable {
     }
     
     func getJobs() {
-        guard let dates =  Date().add(days: jobsLimit)?.toString() else {
-            return
-        }
-        
-        jobsInteractor.getJobsFor(dates: dates) { [weak self] (jobs, error) in
+        jobsInteractor.getJobsFor(dates: jobDaystoLoad) { [weak self] (jobs, error) in
             if let jobs = jobs {
                 self?.jobs = jobs
                 self?.jobsView.update(jobs)
@@ -46,10 +56,42 @@ class JobsPresenter: JobsPresentable {
         getJobs()
     }
     
+    func sectionHeaderAt(index: Int) -> String? {
+        guard let jobs = jobs else { return nil }
+        
+        let formattedStringDate = Array(jobs.keys)[index].toDate()?.toString(format: "EEEE dd MMMM")
+        return formattedStringDate
+    }
+    
     func numberOfItemsInSection(index: Int) -> Int {
         guard let jobs = jobs else { return 0 }
         
         return Array(jobs.values)[index].count
+    }
+    
+    func itemsAt(section: Int) -> [CardContentViewModel]? {
+        guard let jobs = jobs else { return nil }
+        
+        let key = Array(jobs.keys)[section]
+        guard let jobsAtSection = jobs[key] else { return nil }
+        
+        var cardContentViewModels = [CardContentViewModel]()
+        jobsAtSection.forEach { job in
+            let shifts: String
+            if let startTime = job.shifts.first?.startTime, let endTime = job.shifts.first?.endTime {
+                shifts = startTime + "-" + endTime
+            } else {
+                shifts = "No available shift"
+                assertionFailure("No shifts available for this job\(job.jobCategory.description)")
+            }
+            cardContentViewModels.append(CardContentViewModel(primary: job.jobCategory.description, secondary: job.client.name, description: shifts, image: job.client.photos.first?.formats?.first?.cdnUrl ?? ""))
+        }
+        
+        return cardContentViewModels
+    }
+    
+    func itemAtIndex(index: Int, in section: Int) -> CardContentViewModel? {
+        return itemsAt(section: section)?[index]
     }
     
     func buildCardContentViewModels() -> [CardContentViewModel] {
@@ -63,7 +105,7 @@ class JobsPresenter: JobsPresentable {
                 assertionFailure("No shifts available for this job\(job.jobCategory.description)")
             }
             cardContentViewModels.append(CardContentViewModel(primary: job.jobCategory.description, secondary: job.client.name, description: shifts, image: job.client.photos.first?.formats?.first?.cdnUrl ?? ""))
-        })
+        })  
         
         return cardContentViewModels
     }

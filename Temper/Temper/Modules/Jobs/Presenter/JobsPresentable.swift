@@ -13,6 +13,9 @@ protocol JobsPresentable: TemperPresentable {
     func getMoreJobs()
     
     func numberOfItemsInSection(index: Int) -> Int
+    func sectionHeaderAt(index: Int) -> String?
+    func itemAtIndex(index: Int, in section: Int) -> CardContentViewModel?
+    func itemsAt(section: Int) -> [CardContentViewModel]?
     func buildCardContentViewModels() -> [CardContentViewModel]
 }
 

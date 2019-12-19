@@ -19,22 +19,7 @@ class JobsViewController: StatusBarAnimatableViewController {
     var presenter: JobsPresentable!
     
     private var transition: CardTransition?
-    
-    private lazy var cardModels: [CardContentViewModel] = [
-        CardContentViewModel(primary: "GAME OF THE DAY",
-                             secondary: "Minecraft makes a splash",
-                             description: "The ocean is a big place. Tap to read how Minecraft's just got even bigger.",
-                             image: #imageLiteral(resourceName: "drowning").resize(toWidth: UIScreen.main.bounds.size.width * (1/Constants.CardAnimation.cardHighlightedFactor))),
-        CardContentViewModel(primary: "You won't believe this guy",
-                             secondary: "Something we want",
-                             description: "They have something we want which is not something we need.",
-                             image: #imageLiteral(resourceName: "img2.jpg").resize(toWidth: UIScreen.main.bounds.size.width * (1/Constants.CardAnimation.cardHighlightedFactor))),
-        CardContentViewModel(primary: "LET'S PLAY",
-                             secondary: "Cats, cats, cats!",
-                             description: "Play these games right meow.",
-                             image: #imageLiteral(resourceName: "img1.png").resize(toWidth: UIScreen.main.bounds.size.width * (1/Constants.CardAnimation.cardHighlightedFactor)))
-    ]
-    
+
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -109,13 +94,19 @@ extension JobsViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let cell = cell as! CardCollectionViewCell
-        cell.cardContentView?.viewModel = presenter.buildCardContentViewModels()[indexPath.row]
+        cell.cardContentView.viewModel = presenter.itemAtIndex(index: indexPath.item, in: indexPath.section)
+        
+        // Pagination e.g. load more jobs when scrolling at the bottom of the collection view
+        if let itemsAtSection = presenter.itemsAt(section: indexPath.section), indexPath.row == itemsAtSection.count - 1, let keyCount = presenter.jobs?.keys.count, indexPath.section == keyCount - 1 {
+            presenter.getMoreJobs()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
             let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionHeader", for: indexPath) as! SectionHeader
-            sectionHeader.label.text = "TRENDING"
+            
+            sectionHeader.label.text = presenter.sectionHeaderAt(index: indexPath.section)
             return sectionHeader
         } else {
             return UICollectionReusableView()
@@ -165,7 +156,9 @@ extension JobsViewController {
             return cell.superview!.convert(r, to: nil)
         }()
         
-        let cardModel = cardModels[indexPath.row]
+        guard let cardModel = presenter.itemAtIndex(index: indexPath.item, in: indexPath.section) else {
+            return
+        }
         
         // Set up card detail view controller
         let vc = storyboard!.instantiateViewController(withIdentifier: "cardDetailVc") as! CardDetailViewController
@@ -185,18 +178,5 @@ extension JobsViewController {
             // Unfreeze
             cell.unfreezeAnimations()
         })
-    }
-}
-
-extension JobsViewController: UIScrollViewDelegate {
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        // UITableView only moves in one direction, y axis
-        let currentOffset = scrollView.contentOffset.y
-        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-
-        // Change 10.0 to adjust the distance from bottom
-        if maximumOffset - currentOffset <= 10.0 {
-            presenter.getJobs()
-        }
     }
 }
