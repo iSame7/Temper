@@ -13,7 +13,6 @@ class JobsViewController: StatusBarAnimatableViewController {
     // MARK: - IBOutlets
     
     @IBOutlet private weak var collectionView: UICollectionView!
-    private let refreshControl = UIRefreshControl()
     
     // MARK: - Properties
     
@@ -41,10 +40,8 @@ class JobsViewController: StatusBarAnimatableViewController {
     private func setupCollectionView() {
         // Make it responds to highlight state faster
         collectionView.delaysContentTouches = false
-        
-        refreshControl.addTarget(self, action: #selector(refreshJobList), for: .valueChanged)
 
-        collectionView.refreshControl = refreshControl
+        addRefreshControl()
         
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.minimumLineSpacing = 20
@@ -57,10 +54,6 @@ class JobsViewController: StatusBarAnimatableViewController {
         collectionView.clipsToBounds = false
         collectionView.register(UINib(nibName: "\(CardCollectionViewCell.self)", bundle: nil), forCellWithReuseIdentifier: "card")
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: "sectionHeader")
-    }
-    
-    @objc func refreshJobList() {
-        presenter.refreshJobs()
     }
 }
 
@@ -76,14 +69,26 @@ extension JobsViewController: StoryboardInstantiatable {
     }
 }
 
+// MARK: - PullToRefreshActionHandling
+
+extension JobsViewController: PullToRefreshActionHandling {
+    var pullTpRefreshControl: UIRefreshControl? {
+        get {
+            return collectionView.refreshControl
+        }
+        set {}
+    }
+    
+    func refreshControlValueChanged() {
+        presenter.refreshJobs()
+    }
+}
+
 // MARK: - JobsViewable
 
 extension JobsViewController: JobsViewable {
     func update() {
-        if refreshControl.isRefreshing {
-            refreshControl.endRefreshing()
-        }
-        
+        endRefreshingIfNeeded()
         collectionView.reloadData()
     }
     

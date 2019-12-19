@@ -49,6 +49,7 @@
 		501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288623AA812A007ECE6F /* Date+Extenstions.swift */; };
 		501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288823AB142E007ECE6F /* String+Extenstions.swift */; };
 		501C288B23AB9A7B007ECE6F /* SectionJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288A23AB9A7B007ECE6F /* SectionJob.swift */; };
+		501C288E23ABA348007ECE6F /* PullToRefreshActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -126,6 +127,7 @@
 		501C288623AA812A007ECE6F /* Date+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extenstions.swift"; sourceTree = "<group>"; };
 		501C288823AB142E007ECE6F /* String+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extenstions.swift"; sourceTree = "<group>"; };
 		501C288A23AB9A7B007ECE6F /* SectionJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionJob.swift; sourceTree = "<group>"; };
+		501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshActionHandling.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		501C281123A8D90F007ECE6F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				501C288C23ABA2B9007ECE6F /* Protocols */,
 				501C285423AA392A007ECE6F /* Components */,
 				501C281423A8DAC6007ECE6F /* Config */,
 				501C281523A8DACD007ECE6F /* Constants */,
@@ -343,6 +346,14 @@
 				501C288023AA41EB007ECE6F /* StatusBarAnimatableViewController.swift */,
 			);
 			path = "Status Bar Animation";
+			sourceTree = "<group>";
+		};
+		501C288C23ABA2B9007ECE6F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		5091441E23A3C86F00E7E791 = {
@@ -727,6 +738,7 @@
 				501C287823AA3EB7007ECE6F /* CardContentViewModel.swift in Sources */,
 				501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */,
 				501C281F23A8E781007ECE6F /* TemperError.swift in Sources */,
+				501C288E23ABA348007ECE6F /* PullToRefreshActionHandling.swift in Sources */,
 				501C286523AA3BC7007ECE6F /* PresentCardAnimator.swift in Sources */,
 				501C288123AA41EB007ECE6F /* StatusBarAnimatableViewController.swift in Sources */,
 				501C283323A92BDA007ECE6F /* ModuleBuildable.swift in Sources */,
