@@ -12,6 +12,7 @@ struct CardContentViewModel {
     let primary: String
     let secondary: String
     let description: String
+    let details: String
     let image: String
 
     func highlightedImage() -> CardContentViewModel {
@@ -19,6 +20,7 @@ struct CardContentViewModel {
         return CardContentViewModel(primary: primary,
                                     secondary: secondary,
                                     description: description,
+                                    details: details,
                                     image: image)
     }
 }

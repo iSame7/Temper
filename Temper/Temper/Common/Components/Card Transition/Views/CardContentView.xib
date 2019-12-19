@@ -10,7 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardContentView" customModule="Temper" customModuleProvider="target">
             <connections>
                 <outlet property="detailLabel" destination="PH7-Kf-mcd" id="rrq-8R-nEa"/>
-                <outlet property="imageView" destination="4rS-AJ-9WZ" id="r9n-0n-gGT"/>
+                <outlet property="imageView" destination="4rS-AJ-9WZ" id="s8N-sH-TKM"/>
+                <outlet property="moreDetailLabel" destination="UnR-Jc-pIq" id="S2U-wR-dKt"/>
                 <outlet property="primaryLabel" destination="Xmi-iY-MPN" id="L0h-IQ-fWv"/>
                 <outlet property="secondaryLabel" destination="cUo-2g-Vdm" id="Arh-OD-oR2"/>
             </connections>
@@ -26,50 +27,84 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="4rS-AJ-9WZ">
                             <rect key="frame" x="0.0" y="0.0" width="319" height="425"/>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFv-j9-BHc">
-                            <rect key="frame" x="0.0" y="317" width="319" height="108"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOL-sF-dng">
+                            <rect key="frame" x="0.0" y="286" width="319" height="139"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-O4-JDX">
-                                    <rect key="frame" x="10" y="11" width="309" height="86"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFv-j9-BHc">
+                                    <rect key="frame" x="0.0" y="26" width="319" height="113"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDEPENDENT CHEF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmi-iY-MPN">
-                                            <rect key="frame" x="0.0" y="0.0" width="309" height="19.5"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                            <color key="textColor" red="0.37254901959999998" green="0.18823529410000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zelfstandig werkend kok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUo-2g-Vdm">
-                                            <rect key="frame" x="0.0" y="32.5" width="309" height="20.5"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-O4-JDX">
+                                            <rect key="frame" x="10" y="15.5" width="309" height="86"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDEPENDENT CHEF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmi-iY-MPN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="309" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="0.37254901959999998" green="0.18823529410000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zelfstandig werkend kok" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUo-2g-Vdm">
+                                                    <rect key="frame" x="0.0" y="32.5" width="309" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30 - 19:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-Kf-mcd">
+                                                    <rect key="frame" x="0.0" y="66" width="309" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="HOf-O4-JDX" firstAttribute="centerY" secondItem="UFv-j9-BHc" secondAttribute="centerY" constant="2" id="I5v-9b-aqO"/>
+                                        <constraint firstAttribute="trailing" secondItem="HOf-O4-JDX" secondAttribute="trailing" id="hZv-Yt-wpI"/>
+                                        <constraint firstItem="HOf-O4-JDX" firstAttribute="leading" secondItem="UFv-j9-BHc" secondAttribute="leading" constant="10" id="l3X-Bl-97N"/>
+                                        <constraint firstAttribute="height" constant="113" id="uiJ-Ek-9Us"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5pz-kt-q8C" customClass="PriceShapeView" customModule="Temper" customModuleProvider="target">
+                                    <rect key="frame" x="224" y="1" width="95" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€ 15.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnR-Jc-pIq">
+                                            <rect key="frame" x="8" y="0.0" width="87" height="30"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30 - 19:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-Kf-mcd">
-                                            <rect key="frame" x="0.0" y="66" width="309" height="20"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
-                                </stackView>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="UnR-Jc-pIq" firstAttribute="top" secondItem="5pz-kt-q8C" secondAttribute="top" id="2tf-Ue-2EL"/>
+                                        <constraint firstAttribute="trailing" secondItem="UnR-Jc-pIq" secondAttribute="trailing" id="FGw-u0-5L2"/>
+                                        <constraint firstItem="UnR-Jc-pIq" firstAttribute="leading" secondItem="5pz-kt-q8C" secondAttribute="leading" constant="8" id="T6H-BQ-7IF"/>
+                                        <constraint firstAttribute="bottom" secondItem="UnR-Jc-pIq" secondAttribute="bottom" id="c0P-vg-3Hc"/>
+                                        <constraint firstAttribute="height" constant="30" id="fEO-Gp-zOq"/>
+                                        <constraint firstAttribute="width" constant="95" id="y34-lh-VVp"/>
+                                    </constraints>
+                                </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="HOf-O4-JDX" firstAttribute="centerY" secondItem="UFv-j9-BHc" secondAttribute="centerY" id="I5v-9b-aqO"/>
-                                <constraint firstAttribute="trailing" secondItem="HOf-O4-JDX" secondAttribute="trailing" id="hZv-Yt-wpI"/>
-                                <constraint firstItem="HOf-O4-JDX" firstAttribute="leading" secondItem="UFv-j9-BHc" secondAttribute="leading" constant="10" id="l3X-Bl-97N"/>
-                                <constraint firstAttribute="height" constant="108" id="uiJ-Ek-9Us"/>
+                                <constraint firstAttribute="trailing" secondItem="UFv-j9-BHc" secondAttribute="trailing" id="LCU-YI-xq2"/>
+                                <constraint firstAttribute="trailing" secondItem="5pz-kt-q8C" secondAttribute="trailing" id="d7g-BO-PAP"/>
+                                <constraint firstItem="5pz-kt-q8C" firstAttribute="top" secondItem="rOL-sF-dng" secondAttribute="top" constant="1" id="fYd-QI-137"/>
+                                <constraint firstItem="UFv-j9-BHc" firstAttribute="leading" secondItem="rOL-sF-dng" secondAttribute="leading" id="gAy-6M-Ob1"/>
+                                <constraint firstAttribute="height" constant="139" id="o8a-bZ-3Mi"/>
+                                <constraint firstItem="UFv-j9-BHc" firstAttribute="top" secondItem="5pz-kt-q8C" secondAttribute="bottom" constant="-5" id="tfI-ny-CcL"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="4rS-AJ-9WZ" secondAttribute="bottom" id="AF2-gz-awy"/>
-                        <constraint firstItem="UFv-j9-BHc" firstAttribute="bottom" secondItem="qfs-i7-WRC" secondAttribute="bottom" id="CPr-Kg-gFh"/>
+                        <constraint firstItem="rOL-sF-dng" firstAttribute="leading" secondItem="2Ns-t8-ycM" secondAttribute="leading" id="Jdg-zZ-b0O"/>
                         <constraint firstItem="4rS-AJ-9WZ" firstAttribute="top" secondItem="2Ns-t8-ycM" secondAttribute="top" id="Ou6-bS-M6Q"/>
-                        <constraint firstItem="UFv-j9-BHc" firstAttribute="leading" secondItem="qfs-i7-WRC" secondAttribute="leading" id="WrI-1z-EdC"/>
+                        <constraint firstAttribute="trailing" secondItem="rOL-sF-dng" secondAttribute="trailing" id="ToQ-ZZ-Neg"/>
                         <constraint firstItem="4rS-AJ-9WZ" firstAttribute="leading" secondItem="2Ns-t8-ycM" secondAttribute="leading" id="f64-SK-aXy"/>
                         <constraint firstAttribute="trailing" secondItem="4rS-AJ-9WZ" secondAttribute="trailing" id="jd3-Um-Dl1"/>
-                        <constraint firstItem="UFv-j9-BHc" firstAttribute="trailing" secondItem="qfs-i7-WRC" secondAttribute="trailing" id="xq2-VQ-2kS"/>
+                        <constraint firstAttribute="bottom" secondItem="rOL-sF-dng" secondAttribute="bottom" id="mP2-Nb-rsO"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="qfs-i7-WRC"/>
                 </view>
@@ -83,7 +118,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="oeS-bc-dzI"/>
-            <point key="canvasLocation" x="80.434782608695656" y="57.254464285714285"/>
+            <point key="canvasLocation" x="45.652173913043484" y="54.575892857142854"/>
         </view>
     </objects>
     <resources>

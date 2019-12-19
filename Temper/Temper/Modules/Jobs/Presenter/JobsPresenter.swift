@@ -97,7 +97,7 @@ class JobsPresenter: JobsPresentable {
                 shifts = "No available shift"
                 assertionFailure("No shifts available for this job\(job.jobCategory.description)")
             }
-            cardContentViewModels.append(CardContentViewModel(primary: job.jobCategory.description, secondary: job.client.name, description: shifts, image: job.client.photos.first?.formats?.first?.cdnUrl ?? ""))
+            cardContentViewModels.append(CardContentViewModel(primary: job.jobCategory.description, secondary: job.client.name, description: shifts, details: String(format:"€ %.2f", job.maxPossibleEarningsHour), image: job.client.photos.first?.formats?.first?.cdnUrl ?? ""))
         }
         
         return cardContentViewModels

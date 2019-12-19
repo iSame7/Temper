@@ -50,6 +50,7 @@
 		501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288823AB142E007ECE6F /* String+Extenstions.swift */; };
 		501C288B23AB9A7B007ECE6F /* SectionJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288A23AB9A7B007ECE6F /* SectionJob.swift */; };
 		501C288E23ABA348007ECE6F /* PullToRefreshActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */; };
+		501C289023ABAE11007ECE6F /* PriceShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288F23ABAE11007ECE6F /* PriceShapeView.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -128,6 +129,7 @@
 		501C288823AB142E007ECE6F /* String+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extenstions.swift"; sourceTree = "<group>"; };
 		501C288A23AB9A7B007ECE6F /* SectionJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionJob.swift; sourceTree = "<group>"; };
 		501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshActionHandling.swift; sourceTree = "<group>"; };
+		501C288F23ABAE11007ECE6F /* PriceShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceShapeView.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -473,6 +475,7 @@
 				50FA8E3D23A7ABF3007AA792 /* JobsViewable.swift */,
 				50FA8E2623A67427007AA792 /* JobsViewController.swift */,
 				501C288423AA516A007ECE6F /* SectionHeader.swift */,
+				501C288F23ABAE11007ECE6F /* PriceShapeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				501C282F23A92AFF007ECE6F /* TemperModule.swift in Sources */,
 				501C281323A8D919007ECE6F /* Config.swift in Sources */,
 				501C283A23A96666007ECE6F /* TemperBaseViewController.swift in Sources */,
+				501C289023ABAE11007ECE6F /* PriceShapeView.swift in Sources */,
 				501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */,
 				501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */,
 				501C286323AA3BB6007ECE6F /* CardTransition.swift in Sources */,

@@ -17,6 +17,7 @@ import Nuke
     @IBOutlet weak var primaryLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var moreDetailLabel: UILabel!
 
     @IBOutlet weak var imageToTopAnchor: NSLayoutConstraint!
     @IBOutlet weak var imageToLeadingAnchor: NSLayoutConstraint!
@@ -40,6 +41,7 @@ import Nuke
             primaryLabel.text = viewModel?.primary
             secondaryLabel.text = viewModel?.secondary
             detailLabel.text = viewModel?.description
+            moreDetailLabel.text = viewModel?.details
             if let imageStringURL = viewModel?.image, let imageURL = URL(string: imageStringURL) {
                 Nuke.loadImage(with: imageURL, options: ImageLoadingOptions(contentModes: .init(success: .scaleAspectFill, failure: .scaleAspectFill, placeholder: .scaleAspectFill)), into: imageView)
             }
