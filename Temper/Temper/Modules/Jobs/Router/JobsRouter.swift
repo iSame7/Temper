@@ -8,21 +8,17 @@
 
 import UIKit
 
-class JobsRouter: Router {
-    
+class JobsRouter: Router {    
     // MARK: - Properties
     
-    private let window: UIWindow?
     private let jobsBuilder: ModuleBuildable?
-
-    lazy var rootViewController: UINavigationController = {
-        return UINavigationController(rootViewController: UIViewController())
-    }()
+    var signUpRouter: Router?
+    
+    var window: UIWindow?
     
     // MARK: - Coordinator
     
-    init(window: UIWindow?, jobsBuilder: ModuleBuildable?) {
-        self.window = window
+    init(jobsBuilder: ModuleBuildable?) {
         self.jobsBuilder = jobsBuilder
     }
     
@@ -34,6 +30,20 @@ class JobsRouter: Router {
         if let jobsBuilder = jobsBuilder {
             window.rootViewController = jobsBuilder.buildModule()?.viewController
             window.makeKeyAndVisible()
+        }
+    }
+}
+
+extension JobsRouter: JobsPresenterDelegate  {
+    func didTapSignupButton() {
+        if let signUpRouter = signUpRouter {
+            startChildRouter(signUpRouter)
+        }
+    }
+    
+    func didTapLoginButton() {
+        if let signUpRouter = signUpRouter {
+            startChildRouter(signUpRouter)
         }
     }
 }

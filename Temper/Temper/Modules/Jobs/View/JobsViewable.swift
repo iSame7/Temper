@@ -6,7 +6,7 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
-protocol JobsViewable {
+protocol JobsViewable: Presentable {
     func update()
     func showError(error: Error)
 }

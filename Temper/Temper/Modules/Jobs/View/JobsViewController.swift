@@ -21,6 +21,7 @@ class JobsViewController: StatusBarAnimatableViewController {
     @IBOutlet weak var signupOrLoginView: SignupOrLoginView! {
         didSet {
             signupOrLoginView.isHidden = true
+            signupOrLoginView.delegate = self
         }
     }
     
@@ -108,6 +109,18 @@ extension JobsViewController: JobsViewable {
     }
     
     func showError(error: Error) {
+    }
+}
+
+// MARAK: - SignupOrLoginViewDelegate
+
+extension JobsViewController: SignupOrLoginViewDelegate {
+    func didTapSignupButton() {
+        presenter.didTapSignupButton()
+    }
+    
+    func didTapLoginButton() {
+        presenter.didTapLoginButton()
     }
 }
 

@@ -16,6 +16,10 @@ extension Container {
             JobsModuleBuidler(container: c)
         }).inObjectScope(.container)
 
+        c.register(SignUpModuleBuilder.self, factory: { r in
+            SignUpModuleBuilder(container: c)
+        }).inObjectScope(.container)
+
         return c
     }()
 }

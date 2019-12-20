@@ -18,5 +18,8 @@ protocol JobsPresentable: TemperPresentable {
     func sectionHeaderAt(index: Int) -> String?
     func itemsAt(section: Int) -> [CardContentViewModel]?
     func itemAtIndex(index: Int, in section: Int) -> CardContentViewModel?
+    
+    func didTapSignupButton()
+    func didTapLoginButton()
 }
 

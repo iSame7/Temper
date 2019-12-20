@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol SignupOrLoginViewDelegate {
+    func didTapSignupButton()
+    func didTapLoginButton()
+}
+
 class SignupOrLoginView: UIView, NibLoadable {
+    // MARK: - Properties
+    var delegate: SignupOrLoginViewDelegate?
+    
     // MARK: - Init
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,9 +42,11 @@ class SignupOrLoginView: UIView, NibLoadable {
     // MARKS: - IBActions
     
     @IBAction func signupButtonTapped(_ sender: Any) {
+        delegate?.didTapSignupButton()
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        delegate?.didTapLoginButton()
     }
 }
 

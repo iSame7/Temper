@@ -36,6 +36,8 @@ class JobsPresenter: JobsPresentable {
         }
     }
     
+    var delegate: JobsPresenterDelegate?
+    
     // MARK: - Init
     
     init(jobsInteractor: JobsInteractable, jobsView: JobsViewable) {
@@ -105,5 +107,13 @@ class JobsPresenter: JobsPresentable {
     
     func itemAtIndex(index: Int, in section: Int) -> CardContentViewModel? {
         return itemsAt(section: section)?[index]
+    }
+    
+    func didTapSignupButton() {
+        delegate?.didTapSignupButton()
+    }
+    
+    func didTapLoginButton() {
+        delegate?.didTapLoginButton()
     }
 }

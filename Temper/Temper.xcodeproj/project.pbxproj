@@ -56,11 +56,20 @@
 		501C289823AC4C72007ECE6F /* SignupOrLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501C289723AC4C72007ECE6F /* SignupOrLoginView.xib */; };
 		501C289A23AC4C8F007ECE6F /* SignupOrLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289923AC4C8F007ECE6F /* SignupOrLoginView.swift */; };
 		501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */; };
+		501C289E23AC5A45007ECE6F /* JobsPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289D23AC5A45007ECE6F /* JobsPresenterDelegate.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
 		5091443723A3C87000E7E791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5091443523A3C87000E7E791 /* LaunchScreen.storyboard */; };
 		50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A711E223A81C6900961415 /* NetworkRouter.swift */; };
+		50B0F46A23AC63F5001860D8 /* SignUpOrSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F46923AC63F5001860D8 /* SignUpOrSignInViewController.swift */; };
+		50B0F46D23AC64F6001860D8 /* SignUpModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F46C23AC64F6001860D8 /* SignUpModuleBuilder.swift */; };
+		50B0F46F23AC659E001860D8 /* SignupViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F46E23AC659E001860D8 /* SignupViewable.swift */; };
+		50B0F47123AC67BC001860D8 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47023AC67BC001860D8 /* SignUpRouter.swift */; };
+		50B0F47323AC68DB001860D8 /* NavigationControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47223AC68DB001860D8 /* NavigationControllable.swift */; };
+		50B0F47523AC691B001860D8 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47423AC691B001860D8 /* Presentable.swift */; };
+		50B0F47723AC69A1001860D8 /* UINavigationController+NavigationControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47623AC69A1001860D8 /* UINavigationController+NavigationControllable.swift */; };
+		50B0F47923AC69CD001860D8 /* UIViewController+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47823AC69CD001860D8 /* UIViewController+Presentable.swift */; };
 		50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */; };
 		50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */; };
 		50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */; };
@@ -140,6 +149,7 @@
 		501C289723AC4C72007ECE6F /* SignupOrLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupOrLoginView.xib; sourceTree = "<group>"; };
 		501C289923AC4C8F007ECE6F /* SignupOrLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupOrLoginView.swift; sourceTree = "<group>"; };
 		501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extenstions.swift"; sourceTree = "<group>"; };
+		501C289D23AC5A45007ECE6F /* JobsPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterDelegate.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +159,14 @@
 		5091443D23A3C87000E7E791 /* TemperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091444323A3C87000E7E791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A711E223A81C6900961415 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		50B0F46923AC63F5001860D8 /* SignUpOrSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOrSignInViewController.swift; sourceTree = "<group>"; };
+		50B0F46C23AC64F6001860D8 /* SignUpModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModuleBuilder.swift; sourceTree = "<group>"; };
+		50B0F46E23AC659E001860D8 /* SignupViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewable.swift; sourceTree = "<group>"; };
+		50B0F47023AC67BC001860D8 /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		50B0F47223AC68DB001860D8 /* NavigationControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllable.swift; sourceTree = "<group>"; };
+		50B0F47423AC691B001860D8 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		50B0F47623AC69A1001860D8 /* UINavigationController+NavigationControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+NavigationControllable.swift"; sourceTree = "<group>"; };
+		50B0F47823AC69CD001860D8 /* UIViewController+Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentable.swift"; sourceTree = "<group>"; };
 		50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerMock.swift; sourceTree = "<group>"; };
 		50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsInteractorMock.swift; sourceTree = "<group>"; };
 		50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterTests.swift; sourceTree = "<group>"; };
@@ -246,6 +264,8 @@
 				501C288623AA812A007ECE6F /* Date+Extenstions.swift */,
 				501C288823AB142E007ECE6F /* String+Extenstions.swift */,
 				501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */,
+				50B0F47623AC69A1001860D8 /* UINavigationController+NavigationControllable.swift */,
+				50B0F47823AC69CD001860D8 /* UIViewController+Presentable.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -365,6 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */,
+				50B0F47223AC68DB001860D8 /* NavigationControllable.swift */,
+				50B0F47423AC691B001860D8 /* Presentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -451,6 +473,41 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		50B0F46623AC618F001860D8 /* Signup  */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F46723AC61BC001860D8 /* Builder */,
+				50B0F46B23AC64DF001860D8 /* Router */,
+				50B0F46823AC61C2001860D8 /* View */,
+			);
+			path = "Signup ";
+			sourceTree = "<group>";
+		};
+		50B0F46723AC61BC001860D8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F46C23AC64F6001860D8 /* SignUpModuleBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		50B0F46823AC61C2001860D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F46923AC63F5001860D8 /* SignUpOrSignInViewController.swift */,
+				50B0F46E23AC659E001860D8 /* SignupViewable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50B0F46B23AC64DF001860D8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F47023AC67BC001860D8 /* SignUpRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		50CA8EE423A7BC9700A6DF65 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +536,7 @@
 		50FA8E2423A673F2007AA792 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				50B0F46623AC618F001860D8 /* Signup  */,
 				50FA8E2523A67402007AA792 /* Jobs */,
 			);
 			path = Modules;
@@ -516,6 +574,7 @@
 			children = (
 				50FA8E2C23A67DCB007AA792 /* JobsPresenter.swift */,
 				50FA8E2E23A67E1A007AA792 /* JobsPresentable.swift */,
+				501C289D23AC5A45007ECE6F /* JobsPresenterDelegate.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -750,23 +809,28 @@
 				501C283123A92B6A007ECE6F /* JobsModuleBuilder.swift in Sources */,
 				501C288523AA516A007ECE6F /* SectionHeader.swift in Sources */,
 				50FA8E3923A6892E007AA792 /* JobsService.swift in Sources */,
+				501C289E23AC5A45007ECE6F /* JobsPresenterDelegate.swift in Sources */,
 				501C282B23A8FED3007ECE6F /* TemperContent.swift in Sources */,
 				501C286A23AA3D88007ECE6F /* CardContentView.swift in Sources */,
 				501C287623AA3E27007ECE6F /* CardCollectionViewCell.swift in Sources */,
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
 				501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */,
+				50B0F47323AC68DB001860D8 /* NavigationControllable.swift in Sources */,
 				501C287C23AA4006007ECE6F /* NibLoadable.swift in Sources */,
 				501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */,
 				50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */,
+				50B0F46A23AC63F5001860D8 /* SignUpOrSignInViewController.swift in Sources */,
 				501C284B23A9817B007ECE6F /* Router.swift in Sources */,
 				501C282523A8FE94007ECE6F /* Photo.swift in Sources */,
 				501C287A23AA3F70007ECE6F /* UIView+AutoLayout.swift in Sources */,
 				501C286123AA3BA6007ECE6F /* CardPresentationController.swift in Sources */,
 				501C284523A977E7007ECE6F /* StoryboardInstantiateType.swift in Sources */,
 				501C285223AA365D007ECE6F /* JobsRouter.swift in Sources */,
+				50B0F46D23AC64F6001860D8 /* SignUpModuleBuilder.swift in Sources */,
 				50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */,
 				50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */,
 				501C282F23A92AFF007ECE6F /* TemperModule.swift in Sources */,
+				50B0F47723AC69A1001860D8 /* UINavigationController+NavigationControllable.swift in Sources */,
 				501C281323A8D919007ECE6F /* Config.swift in Sources */,
 				501C283A23A96666007ECE6F /* TemperBaseViewController.swift in Sources */,
 				501C289023ABAE11007ECE6F /* PriceShapeView.swift in Sources */,
@@ -781,12 +845,16 @@
 				501C286523AA3BC7007ECE6F /* PresentCardAnimator.swift in Sources */,
 				501C288123AA41EB007ECE6F /* StatusBarAnimatableViewController.swift in Sources */,
 				501C283323A92BDA007ECE6F /* ModuleBuildable.swift in Sources */,
+				50B0F47123AC67BC001860D8 /* SignUpRouter.swift in Sources */,
 				501C287F23AA41D8007ECE6F /* StatusBarAnimatable.swift in Sources */,
 				501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */,
 				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
+				50B0F47523AC691B001860D8 /* Presentable.swift in Sources */,
 				501C282923A8FEBC007ECE6F /* Shift.swift in Sources */,
+				50B0F47923AC69CD001860D8 /* UIViewController+Presentable.swift in Sources */,
 				501C284723A977F5007ECE6F /* StoryboardInstantiatable.swift in Sources */,
+				50B0F46F23AC659E001860D8 /* SignupViewable.swift in Sources */,
 				50FA8E3C23A7A962007AA792 /* Job.swift in Sources */,
 				50FA8E3E23A7ABF3007AA792 /* JobsViewable.swift in Sources */,
 				501C288B23AB9A7B007ECE6F /* SectionJob.swift in Sources */,

@@ -6,7 +6,13 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
-class Router {
+protocol Routable {
+    func start()
+    func stop() 
+}
+    
+
+class Router: Routable {
     
     private(set) var childRouters: [Router] = []
     
@@ -36,6 +42,11 @@ class Router {
     
     func removeAllChildRouters() {
         childRouters.removeAll()
+    }
+    
+    func startChildRouter(_ router: Router) {
+        addChildRouter(router)
+        router.start()
     }
 }
 

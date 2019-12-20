@@ -77,7 +77,7 @@
         <!--Card Detail View Controller-->
         <scene sceneID="7Zd-Up-SG3">
             <objects>
-                <viewController storyboardIdentifier="cardDetailVc" id="LXI-F3-F2W" customClass="CardDetailViewController" customModule="AppStoreInteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cardDetailVc" id="LXI-F3-F2W" customClass="CardDetailViewController" customModule="Temper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="dK7-jI-CsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="538"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-Qa-xHy" customClass="CardContentView" customModule="AppStoreInteractiveTransition" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLN-Qa-xHy" customClass="CardContentView" customModule="Temper" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="538"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -167,6 +167,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CR-Ky-0Jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928" y="60"/>
+        </scene>
+        <!--Signup Or Sign In View Controller-->
+        <scene sceneID="vPv-Rq-IT4">
+            <objects>
+                <viewController storyboardIdentifier="SignUpOrSignInViewController" id="v6L-bn-NA4" customClass="SignupOrSignInViewController" customModule="Temper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BtY-wD-ZOK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ut-3p-9Xg">
+                                <rect key="frame" x="20" y="421.5" width="374" height="53"/>
+                                <color key="backgroundColor" red="0.45882352939999999" green="0.98039215690000003" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="th3-rB-ElA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Te-xN-TMJ">
+                                <rect key="frame" x="20" y="498" width="374" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="SlS-Gj-0M7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5ut-3p-9Xg" firstAttribute="centerY" secondItem="BtY-wD-ZOK" secondAttribute="centerY" id="0tz-oV-H2I"/>
+                            <constraint firstItem="6Te-xN-TMJ" firstAttribute="top" secondItem="5ut-3p-9Xg" secondAttribute="bottom" constant="23.5" id="E1J-f7-qjB"/>
+                            <constraint firstItem="6Te-xN-TMJ" firstAttribute="leading" secondItem="NCG-Vo-5LH" secondAttribute="leading" constant="20" id="Ecc-4W-9bF"/>
+                            <constraint firstItem="6Te-xN-TMJ" firstAttribute="leading" secondItem="NCG-Vo-5LH" secondAttribute="leading" constant="20" id="Fws-NU-VUs"/>
+                            <constraint firstItem="5ut-3p-9Xg" firstAttribute="leading" secondItem="NCG-Vo-5LH" secondAttribute="leading" constant="20" id="PrI-OG-DJm"/>
+                            <constraint firstItem="NCG-Vo-5LH" firstAttribute="trailing" secondItem="5ut-3p-9Xg" secondAttribute="trailing" constant="20" id="dUB-KR-wD6"/>
+                            <constraint firstItem="NCG-Vo-5LH" firstAttribute="trailing" secondItem="6Te-xN-TMJ" secondAttribute="trailing" constant="20" id="ftz-rp-30Y"/>
+                            <constraint firstItem="NCG-Vo-5LH" firstAttribute="trailing" secondItem="6Te-xN-TMJ" secondAttribute="trailing" constant="20" id="xsj-B9-Y83"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NCG-Vo-5LH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rES-IU-QBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686.9565217391305" y="59.598214285714285"/>
         </scene>
     </scenes>
     <resources>
