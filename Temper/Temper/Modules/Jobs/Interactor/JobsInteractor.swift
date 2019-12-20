@@ -7,7 +7,6 @@
 //
 
 class JobsInteractor: JobsInteractable {
-    
     // MARK: - Private properties
     
     private let jobsService: JobsFetching

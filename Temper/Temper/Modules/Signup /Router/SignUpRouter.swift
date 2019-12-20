@@ -25,6 +25,8 @@ class SignUpRouter: Router {
         self.rootViewController = rootViewController
     }
     
+    // MARK: - Life cycle
+    
     override func start() {
         if let signUpOrSignInViewController = signupModuleBuilder.buildModule()?.viewController {
             rootViewController.present(signUpOrSignInViewController, animated: true, completion: nil)
@@ -36,6 +38,7 @@ class SignUpRouter: Router {
     }
 }
 
+// MARK: - SignUpPresenterDelegate
 extension SignUpRouter: SignUpPresenterDelegate {
     func didTappCloseButton() {
         delegate?.signupRouterDidFinish(self)

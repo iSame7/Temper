@@ -13,7 +13,6 @@ protocol JobsFetching {
 }
 
 class JobsService: JobsFetching {
-    
     // MARK: - Private properties
     
     let sessionManager: SessionManager

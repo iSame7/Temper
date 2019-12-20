@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
     struct Params {
         let fromCardFrame: CGRect
@@ -30,9 +30,9 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let ctx = transitionContext
         let container = ctx.containerView
-        let screens: (cardDetail: CardDetailViewController, home: JobsViewController) = (
-            ctx.viewController(forKey: .from)! as! CardDetailViewController,
-            ctx.viewController(forKey: .to)! as! JobsViewController
+        let screens: (cardDetail: CardDetailViewController?, home: JobsViewController?) = (
+            ctx.viewController(forKey: .from) as? CardDetailViewController,
+            ctx.viewController(forKey: .to) as? JobsViewController
         )
 
         let cardDetailView = ctx.view(forKey: .from)!
@@ -63,17 +63,17 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
         NSLayoutConstraint.activate([animatedContainerTopConstraint, animatedContainerWidthConstraint, animatedContainerHeightConstraint])
 
         // Fix weird top inset
-        let topTemporaryFix = screens.cardDetail.cardContentView.topAnchor.constraint(equalTo: cardDetailView.topAnchor)
-        topTemporaryFix.isActive = Constants.CardAnimation.isEnabledWeirdTopInsetsFix
+        let topTemporaryFix = screens.cardDetail?.cardContentView.topAnchor.constraint(equalTo: cardDetailView.topAnchor)
+        topTemporaryFix?.isActive = Constants.CardAnimation.isEnabledWeirdTopInsetsFix
 
         container.layoutIfNeeded()
 
         // Force card filling bottom
-        let stretchCardToFillBottom = screens.cardDetail.cardContentView.bottomAnchor.constraint(equalTo: cardDetailView.bottomAnchor)
+        let stretchCardToFillBottom = screens.cardDetail?.cardContentView.bottomAnchor.constraint(equalTo: cardDetailView.bottomAnchor)
 
         func animateCardViewBackToPlace() {
-            stretchCardToFillBottom.isActive = true
-            screens.cardDetail.isFontStateHighlighted = false
+            stretchCardToFillBottom?.isActive = true
+            screens.cardDetail?.isFontStateHighlighted = false
             // Back to identity
             // NOTE: Animated container view in a way, helps us to not messing up `transform` with `AutoLayout` animation.
             cardDetailView.transform = CGAffineTransform.identity
@@ -91,15 +91,17 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
                 cardDetailView.removeFromSuperview()
                 self.params.fromCell.isHidden = false
             } else {
-                screens.cardDetail.isFontStateHighlighted = true
+                screens.cardDetail?.isFontStateHighlighted = true
 
                 // Remove temporary fixes if not success!
-                topTemporaryFix.isActive = false
-                stretchCardToFillBottom.isActive = false
+                topTemporaryFix?.isActive = false
+                stretchCardToFillBottom?.isActive = false
 
-                cardDetailView.removeConstraint(topTemporaryFix)
-                cardDetailView.removeConstraint(stretchCardToFillBottom)
-
+                if let topTemporaryFix = topTemporaryFix, let stretchCardToFillBottom = stretchCardToFillBottom {
+                    cardDetailView.removeConstraint(topTemporaryFix)
+                    cardDetailView.removeConstraint(stretchCardToFillBottom)
+                }
+                
                 container.removeConstraints(container.constraints)
 
                 container.addSubview(cardDetailView)
@@ -115,7 +117,7 @@ final class DismissCardAnimator: NSObject, UIViewControllerAnimatedTransitioning
         }
 
         UIView.animate(withDuration: transitionDuration(using: ctx) * 0.6) {
-            screens.cardDetail.scrollView.contentOffset = .zero
+            screens.cardDetail?.scrollView.contentOffset = .zero
         }
     }
 }

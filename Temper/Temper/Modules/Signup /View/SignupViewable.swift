@@ -6,5 +6,4 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
-protocol SignUpViewable {
-}
+protocol SignUpViewable {}

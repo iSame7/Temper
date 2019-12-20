@@ -9,6 +9,8 @@
 import UIKit
 
 class SignupOrSignInViewController: UIViewController, SignUpViewable {
+    // MARK: - Properties
+    
     var presenter: SignUpPresentable!
     
     // MARK: - Life cycle
@@ -23,7 +25,6 @@ class SignupOrSignInViewController: UIViewController, SignUpViewable {
 
 
 // MARK: - StoryboardInstantiatable
-
 extension SignupOrSignInViewController: StoryboardInstantiatable {
     static var instantiateType: StoryboardInstantiateType {
         return .identifier("SignUpOrSignInViewController")
@@ -34,6 +35,7 @@ extension SignupOrSignInViewController: StoryboardInstantiatable {
     }
 }
 
+// MARK: - CloseBarButtonActionHandling
 extension SignupOrSignInViewController: CloseBarButtonActionHandling {
     func closeButtonTapped() {
         presenter.closeButtonTapped()
