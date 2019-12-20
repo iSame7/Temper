@@ -11,7 +11,7 @@
 import XCTest
 
 class JobsPresenterTests: XCTestCase {
-    
+
     // MARK: - Test properties
     
     private let jobsViewControllerMock = JobsViewControllerMock()
