@@ -8,7 +8,15 @@
 
 import UIKit
 
-class FloatingView: UIView, NibLoadable {    
+protocol FloatingViewDelegate {
+    func didTappMapButton()
+}
+
+class FloatingView: UIView, NibLoadable {
+    // MARK: - Properties
+    
+    var delegate: FloatingViewDelegate?
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var backgroundView: UIView!
@@ -41,6 +49,7 @@ class FloatingView: UIView, NibLoadable {
     // MARK: - IBActions
     
     @IBAction func mapButtonTapped(_ sender: Any) {
+        delegate?.didTappMapButton()
     }
     
     @IBAction func filtersButtonTapped(_ sender: Any) {

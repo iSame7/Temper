@@ -6,9 +6,7 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
-protocol JobsPresentable: TemperPresentable {
-    var jobs: [SectionJob]? { get }
-    
+protocol JobsPresentable: TemperPresentable {    
     func getJobs()
     func getMoreJobs()
     func refreshJobs()
@@ -21,5 +19,6 @@ protocol JobsPresentable: TemperPresentable {
     
     func didTapSignupButton()
     func didTapLoginButton()
+    func didTappMapButton()
 }
 

@@ -9,4 +9,5 @@
 protocol JobsPresenterDelegate: class {
     func didTapSignupButton()
     func didTapLoginButton()
+    func didTappMapButton(jobs: [Job])
 }

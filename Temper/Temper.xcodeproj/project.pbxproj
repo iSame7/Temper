@@ -75,6 +75,20 @@
 		50B0F48023ACC9CE001860D8 /* InAppNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47F23ACC9CE001860D8 /* InAppNotificationType.swift */; };
 		50B0F48223ACC9D9001860D8 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F48123ACC9D9001860D8 /* DeviceManager.swift */; };
 		50B0F48423ACD06F001860D8 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F48323ACD06F001860D8 /* UIColor+Palette.swift */; };
+		50B0F48B23ACD5F7001860D8 /* MapViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F48A23ACD5F7001860D8 /* MapViewable.swift */; };
+		50B0F48D23ACD66C001860D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F48C23ACD66C001860D8 /* MapViewController.swift */; };
+		50B0F48F23ACD683001860D8 /* MapPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F48E23ACD683001860D8 /* MapPresentable.swift */; };
+		50B0F49123ACD740001860D8 /* JobAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49023ACD740001860D8 /* JobAnnotation.swift */; };
+		50B0F49323ACD781001860D8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49223ACD781001860D8 /* Location.swift */; };
+		50B0F49523ACDD25001860D8 /* MapViewController+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49423ACDD25001860D8 /* MapViewController+UICollectionView.swift */; };
+		50B0F49723ACDDAC001860D8 /* JobCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49623ACDDAC001860D8 /* JobCollectionViewCell.swift */; };
+		50B0F49923ACDFAF001860D8 /* MapModueBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49823ACDFAF001860D8 /* MapModueBuilder.swift */; };
+		50B0F49B23ACE0C0001860D8 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49A23ACE0C0001860D8 /* MapPresenter.swift */; };
+		50B0F49D23ACE144001860D8 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49C23ACE144001860D8 /* MapRouter.swift */; };
+		50B0F4A023ACF75C001860D8 /* MapInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F49F23ACF75C001860D8 /* MapInteractable.swift */; };
+		50B0F4A223ACF798001860D8 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F4A123ACF798001860D8 /* MapInteractor.swift */; };
+		50B0F4A523ACF7C2001860D8 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F4A423ACF7C2001860D8 /* LocationService.swift */; };
+		50B0F4A723AD0A01001860D8 /* CloseBarButtonActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F4A623AD0A01001860D8 /* CloseBarButtonActionHandling.swift */; };
 		50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */; };
 		50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */; };
 		50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */; };
@@ -177,6 +191,20 @@
 		50B0F47F23ACC9CE001860D8 /* InAppNotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppNotificationType.swift; sourceTree = "<group>"; };
 		50B0F48123ACC9D9001860D8 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		50B0F48323ACD06F001860D8 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		50B0F48A23ACD5F7001860D8 /* MapViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewable.swift; sourceTree = "<group>"; };
+		50B0F48C23ACD66C001860D8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		50B0F48E23ACD683001860D8 /* MapPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresentable.swift; sourceTree = "<group>"; };
+		50B0F49023ACD740001860D8 /* JobAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAnnotation.swift; sourceTree = "<group>"; };
+		50B0F49223ACD781001860D8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		50B0F49423ACDD25001860D8 /* MapViewController+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+UICollectionView.swift"; sourceTree = "<group>"; };
+		50B0F49623ACDDAC001860D8 /* JobCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCollectionViewCell.swift; sourceTree = "<group>"; };
+		50B0F49823ACDFAF001860D8 /* MapModueBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModueBuilder.swift; sourceTree = "<group>"; };
+		50B0F49A23ACE0C0001860D8 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		50B0F49C23ACE144001860D8 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		50B0F49F23ACF75C001860D8 /* MapInteractable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractable.swift; sourceTree = "<group>"; };
+		50B0F4A123ACF798001860D8 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		50B0F4A423ACF7C2001860D8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		50B0F4A623AD0A01001860D8 /* CloseBarButtonActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseBarButtonActionHandling.swift; sourceTree = "<group>"; };
 		50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerMock.swift; sourceTree = "<group>"; };
 		50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsInteractorMock.swift; sourceTree = "<group>"; };
 		50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterTests.swift; sourceTree = "<group>"; };
@@ -396,9 +424,10 @@
 		501C288C23ABA2B9007ECE6F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */,
+				50B0F4A623AD0A01001860D8 /* CloseBarButtonActionHandling.swift */,
 				50B0F47223AC68DB001860D8 /* NavigationControllable.swift */,
 				50B0F47423AC691B001860D8 /* Presentable.swift */,
+				501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -531,6 +560,72 @@
 			path = "In App Notification";
 			sourceTree = "<group>";
 		};
+		50B0F48523ACD3E1001860D8 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F48623ACD3EE001860D8 /* Builder */,
+				50B0F49E23ACF740001860D8 /* Interactor */,
+				50B0F48723ACD3F3001860D8 /* Presenter */,
+				50B0F48823ACD50D001860D8 /* Router */,
+				50B0F4A323ACF7B6001860D8 /* Services */,
+				50B0F48923ACD515001860D8 /* View */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		50B0F48623ACD3EE001860D8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F49823ACDFAF001860D8 /* MapModueBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		50B0F48723ACD3F3001860D8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F48E23ACD683001860D8 /* MapPresentable.swift */,
+				50B0F49A23ACE0C0001860D8 /* MapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		50B0F48823ACD50D001860D8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F49C23ACE144001860D8 /* MapRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		50B0F48923ACD515001860D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F49623ACDDAC001860D8 /* JobCollectionViewCell.swift */,
+				50B0F48A23ACD5F7001860D8 /* MapViewable.swift */,
+				50B0F48C23ACD66C001860D8 /* MapViewController.swift */,
+				50B0F49423ACDD25001860D8 /* MapViewController+UICollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50B0F49E23ACF740001860D8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F49F23ACF75C001860D8 /* MapInteractable.swift */,
+				50B0F4A123ACF798001860D8 /* MapInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		50B0F4A323ACF7B6001860D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F4A423ACF7C2001860D8 /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		50CA8EE423A7BC9700A6DF65 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,8 +654,9 @@
 		50FA8E2423A673F2007AA792 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				50B0F46623AC618F001860D8 /* Signup  */,
 				50FA8E2523A67402007AA792 /* Jobs */,
+				50B0F48523ACD3E1001860D8 /* Map */,
+				50B0F46623AC618F001860D8 /* Signup  */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -625,11 +721,13 @@
 				501C282223A8FE7F007ECE6F /* Client.swift */,
 				50FA8E3B23A7A962007AA792 /* Job.swift */,
 				501C282623A8FEAD007ECE6F /* JobCategory.swift */,
+				50B0F49223ACD781001860D8 /* Location.swift */,
 				501C282423A8FE94007ECE6F /* Photo.swift */,
 				501C288A23AB9A7B007ECE6F /* SectionJob.swift */,
 				501C282823A8FEBC007ECE6F /* Shift.swift */,
 				501C282A23A8FED3007ECE6F /* TemperContent.swift */,
 				501C282023A8EDD8007ECE6F /* TemperData.swift */,
+				50B0F49023ACD740001860D8 /* JobAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -832,6 +930,8 @@
 				501C283123A92B6A007ECE6F /* JobsModuleBuilder.swift in Sources */,
 				501C288523AA516A007ECE6F /* SectionHeader.swift in Sources */,
 				50FA8E3923A6892E007AA792 /* JobsService.swift in Sources */,
+				50B0F49523ACDD25001860D8 /* MapViewController+UICollectionView.swift in Sources */,
+				50B0F4A523ACF7C2001860D8 /* LocationService.swift in Sources */,
 				501C289E23AC5A45007ECE6F /* JobsPresenterDelegate.swift in Sources */,
 				50B0F48423ACD06F001860D8 /* UIColor+Palette.swift in Sources */,
 				501C282B23A8FED3007ECE6F /* TemperContent.swift in Sources */,
@@ -839,6 +939,7 @@
 				501C287623AA3E27007ECE6F /* CardCollectionViewCell.swift in Sources */,
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
 				501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */,
+				50B0F48D23ACD66C001860D8 /* MapViewController.swift in Sources */,
 				50B0F47323AC68DB001860D8 /* NavigationControllable.swift in Sources */,
 				501C287C23AA4006007ECE6F /* NibLoadable.swift in Sources */,
 				501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */,
@@ -847,11 +948,14 @@
 				50B0F46A23AC63F5001860D8 /* SignUpOrSignInViewController.swift in Sources */,
 				501C284B23A9817B007ECE6F /* Router.swift in Sources */,
 				501C282523A8FE94007ECE6F /* Photo.swift in Sources */,
+				50B0F4A223ACF798001860D8 /* MapInteractor.swift in Sources */,
 				501C287A23AA3F70007ECE6F /* UIView+AutoLayout.swift in Sources */,
 				501C286123AA3BA6007ECE6F /* CardPresentationController.swift in Sources */,
 				501C284523A977E7007ECE6F /* StoryboardInstantiateType.swift in Sources */,
 				501C285223AA365D007ECE6F /* JobsRouter.swift in Sources */,
+				50B0F49323ACD781001860D8 /* Location.swift in Sources */,
 				50B0F46D23AC64F6001860D8 /* SignUpModuleBuilder.swift in Sources */,
+				50B0F4A723AD0A01001860D8 /* CloseBarButtonActionHandling.swift in Sources */,
 				50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */,
 				50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */,
 				501C282F23A92AFF007ECE6F /* TemperModule.swift in Sources */,
@@ -859,11 +963,13 @@
 				501C281323A8D919007ECE6F /* Config.swift in Sources */,
 				501C283A23A96666007ECE6F /* TemperBaseViewController.swift in Sources */,
 				501C289023ABAE11007ECE6F /* PriceShapeView.swift in Sources */,
+				50B0F49B23ACE0C0001860D8 /* MapPresenter.swift in Sources */,
 				501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */,
 				50B0F48223ACC9D9001860D8 /* DeviceManager.swift in Sources */,
 				501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */,
 				501C286323AA3BB6007ECE6F /* CardTransition.swift in Sources */,
 				501C287823AA3EB7007ECE6F /* CardContentViewModel.swift in Sources */,
+				50B0F48F23ACD683001860D8 /* MapPresentable.swift in Sources */,
 				501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */,
 				501C281F23A8E781007ECE6F /* TemperError.swift in Sources */,
 				501C288E23ABA348007ECE6F /* PullToRefreshActionHandling.swift in Sources */,
@@ -873,16 +979,22 @@
 				501C283323A92BDA007ECE6F /* ModuleBuildable.swift in Sources */,
 				50B0F47123AC67BC001860D8 /* SignUpRouter.swift in Sources */,
 				501C287F23AA41D8007ECE6F /* StatusBarAnimatable.swift in Sources */,
+				50B0F48B23ACD5F7001860D8 /* MapViewable.swift in Sources */,
+				50B0F49723ACDDAC001860D8 /* JobCollectionViewCell.swift in Sources */,
 				501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */,
 				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
 				50B0F47523AC691B001860D8 /* Presentable.swift in Sources */,
+				50B0F49123ACD740001860D8 /* JobAnnotation.swift in Sources */,
 				501C282923A8FEBC007ECE6F /* Shift.swift in Sources */,
+				50B0F4A023ACF75C001860D8 /* MapInteractable.swift in Sources */,
 				50B0F47C23ACC9A0001860D8 /* InAppNotification.swift in Sources */,
 				50B0F47923AC69CD001860D8 /* UIViewController+Presentable.swift in Sources */,
 				501C284723A977F5007ECE6F /* StoryboardInstantiatable.swift in Sources */,
 				50B0F46F23AC659E001860D8 /* SignupViewable.swift in Sources */,
 				50FA8E3C23A7A962007AA792 /* Job.swift in Sources */,
+				50B0F49D23ACE144001860D8 /* MapRouter.swift in Sources */,
+				50B0F49923ACDFAF001860D8 /* MapModueBuilder.swift in Sources */,
 				50FA8E3E23A7ABF3007AA792 /* JobsViewable.swift in Sources */,
 				501C288B23AB9A7B007ECE6F /* SectionJob.swift in Sources */,
 				501C281723A8DAFB007ECE6F /* Constants.swift in Sources */,

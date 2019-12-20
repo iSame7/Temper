@@ -26,6 +26,7 @@ class JobsModuleBuidler: ModuleBuildable {
         registerPresenter()
         registerNetwork()
         registerSignUpRouter()
+        registerMapRouter()
         
         guard let jobsViewController = container.resolve(JobsViewable.self) as? UIViewController  else { return nil }
         return Temper.Module(viewController: jobsViewController)
@@ -42,6 +43,7 @@ class JobsModuleBuidler: ModuleBuildable {
             JobsRouter(jobsBuilder: r.resolve(ModuleBuildable.self)!)
         }).initCompleted({ (r, router) in
             router.signUpRouter = r.resolve(SignUpRouter.self)!
+            router.mapRouter = r.resolve(MapRouter.self)!
         }).inObjectScope(.container)
     }
     
@@ -87,4 +89,9 @@ class JobsModuleBuidler: ModuleBuildable {
         }).inObjectScope(.container)
     }
     
+    func registerMapRouter() {
+        container.register(MapRouter.self, factory: { r in
+            MapRouter(mapModuleBuilder: r.resolve(MapModueBuilderBuildable.self)!, rootViewController: r.resolve(JobsViewable.self)!)
+        }).inObjectScope(.container)
+    }
 }

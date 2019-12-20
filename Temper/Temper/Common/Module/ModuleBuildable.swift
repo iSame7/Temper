@@ -9,3 +9,9 @@
 protocol ModuleBuildable {
     func buildModule() -> Temper.Module?
 }
+
+extension ModuleBuildable {
+    func buildModule() -> Temper.Module? {
+        return nil 
+    }
+}

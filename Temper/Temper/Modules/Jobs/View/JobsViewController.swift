@@ -16,6 +16,7 @@ class JobsViewController: StatusBarAnimatableViewController {
     @IBOutlet weak var floatingView: FloatingView! {
         didSet {
             floatingView.isHidden = true
+            floatingView.delegate = self
         }
     }
     @IBOutlet weak var signupOrLoginView: SignupOrLoginView! {
@@ -126,6 +127,12 @@ extension JobsViewController: SignupOrLoginViewDelegate {
     
     func didTapLoginButton() {
         presenter.didTapLoginButton()
+    }
+}
+
+extension JobsViewController: FloatingViewDelegate {
+    func didTappMapButton() {
+        presenter.didTappMapButton()
     }
 }
 

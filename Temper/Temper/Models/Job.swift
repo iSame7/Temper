@@ -7,6 +7,8 @@
 //
 
 struct Job: Decodable {
+    let title: String
+    let location: Location
     let maxPossibleEarningsHour: Double
     let jobCategory: JobCategory
     let shifts: [Shift]

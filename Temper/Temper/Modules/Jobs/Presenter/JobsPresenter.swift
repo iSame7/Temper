@@ -13,7 +13,7 @@ class JobsPresenter: JobsPresentable {
     // MARK: - Properties
     
     private let jobsInteractor: JobsInteractable
-    private let jobsView: JobsViewable
+    private weak var jobsView: JobsViewable?
     
     private var jobsLimit = 0
     private var jobDaystoLoad: String {
@@ -30,9 +30,9 @@ class JobsPresenter: JobsPresentable {
         return dates
     }
     
-    var jobs: [SectionJob]?{
+    private var jobs: [SectionJob]?{
         didSet {
-            jobsView.update()
+            jobsView?.update()
         }
     }
     
@@ -50,7 +50,7 @@ class JobsPresenter: JobsPresentable {
             if let jobs = jobs {
                 self?.jobs = jobs
             } else if let error = error {
-                self?.jobsView.showError(error: error)
+                self?.jobsView?.showError(error: error)
             }
         }
     }
@@ -115,5 +115,24 @@ class JobsPresenter: JobsPresentable {
     
     func didTapLoginButton() {
         delegate?.didTapLoginButton()
+    }
+    
+    func didTappMapButton() {
+        delegate?.didTappMapButton(jobs: combineAllJobs())
+    }
+}
+
+// MARK: - Helpers
+
+private extension JobsPresenter {
+    private func combineAllJobs() -> [Job] {
+        var jobs = [Job]()
+        self.jobs?.forEach({ sectionJob in
+            sectionJob.jobs.forEach { job in
+                jobs.append(job)
+            }
+        })
+        
+        return jobs
     }
 }

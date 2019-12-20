@@ -20,6 +20,10 @@ extension Container {
             SignUpModuleBuilder(container: c)
         }).inObjectScope(.container)
 
+        c.register(MapModueBuilderBuildable.self, factory: { r in
+            MapModueBuilder(container: c)
+        }).inObjectScope(.container)
+
         return c
     }()
 }
