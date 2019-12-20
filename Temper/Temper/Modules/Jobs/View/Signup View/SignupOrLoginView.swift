@@ -1,20 +1,14 @@
 //
-//  FloatingView.swift
+//  SignupOrLoginView.swift
 //  Temper
 //
-//  Created by Sameh Mabrouk on 19/12/2019.
+//  Created by Sameh Mabrouk on 20/12/2019.
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
 import UIKit
 
-class FloatingView: UIView, NibLoadable {    
-    // MARK: - IBOutlets
-    
-    @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var mapButton: UIButton!
-    @IBOutlet weak var filtersButton: UIButton!
-    
+class SignupOrLoginView: UIView, NibLoadable {
     // MARK: - Init
     
     required init?(coder aDecoder: NSCoder) {
@@ -22,7 +16,6 @@ class FloatingView: UIView, NibLoadable {
         fromNib()
         commonSetup()
     }
-    
     // MARK: - Init
     
     override init(frame: CGRect) {
@@ -38,19 +31,19 @@ class FloatingView: UIView, NibLoadable {
         commonSetup()
     }
     
-    // MARK: - IBActions
+    // MARKS: - IBActions
     
-    @IBAction func mapButtonTapped(_ sender: Any) {
+    @IBAction func signupButtonTapped(_ sender: Any) {
     }
     
-    @IBAction func filtersButtonTapped(_ sender: Any) {
+    @IBAction func loginButtonTapped(_ sender: Any) {
     }
 }
 
 // MARK: - Helpers
 
-private extension FloatingView {
+private extension SignupOrLoginView {
     private func commonSetup() {
-        backgroundView.layer.cornerRadius = 25
     }
 }
+

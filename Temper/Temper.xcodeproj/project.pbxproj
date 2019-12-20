@@ -53,6 +53,9 @@
 		501C289023ABAE11007ECE6F /* PriceShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288F23ABAE11007ECE6F /* PriceShapeView.swift */; };
 		501C289323AC0E6D007ECE6F /* FloatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289223AC0E6D007ECE6F /* FloatingView.swift */; };
 		501C289523AC0E76007ECE6F /* FloatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501C289423AC0E76007ECE6F /* FloatingView.xib */; };
+		501C289823AC4C72007ECE6F /* SignupOrLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501C289723AC4C72007ECE6F /* SignupOrLoginView.xib */; };
+		501C289A23AC4C8F007ECE6F /* SignupOrLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289923AC4C8F007ECE6F /* SignupOrLoginView.swift */; };
+		501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -134,6 +137,9 @@
 		501C288F23ABAE11007ECE6F /* PriceShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceShapeView.swift; sourceTree = "<group>"; };
 		501C289223AC0E6D007ECE6F /* FloatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingView.swift; sourceTree = "<group>"; };
 		501C289423AC0E76007ECE6F /* FloatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingView.xib; sourceTree = "<group>"; };
+		501C289723AC4C72007ECE6F /* SignupOrLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupOrLoginView.xib; sourceTree = "<group>"; };
+		501C289923AC4C8F007ECE6F /* SignupOrLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupOrLoginView.swift; sourceTree = "<group>"; };
+		501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extenstions.swift"; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 				501C287B23AA4006007ECE6F /* NibLoadable.swift */,
 				501C288623AA812A007ECE6F /* Date+Extenstions.swift */,
 				501C288823AB142E007ECE6F /* String+Extenstions.swift */,
+				501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -371,6 +378,15 @@
 			path = "Floating View";
 			sourceTree = "<group>";
 		};
+		501C289623AC4957007ECE6F /* Signup View */ = {
+			isa = PBXGroup;
+			children = (
+				501C289723AC4C72007ECE6F /* SignupOrLoginView.xib */,
+				501C289923AC4C8F007ECE6F /* SignupOrLoginView.swift */,
+			);
+			path = "Signup View";
+			sourceTree = "<group>";
+		};
 		5091441E23A3C86F00E7E791 = {
 			isa = PBXGroup;
 			children = (
@@ -484,6 +500,7 @@
 		50FA8E2823A67D88007AA792 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				501C289623AC4957007ECE6F /* Signup View */,
 				501C289123AC0E3E007ECE6F /* Floating View */,
 				501C288223AA46C7007ECE6F /* CardDetailViewController.swift */,
 				50FA8E3D23A7ABF3007AA792 /* JobsViewable.swift */,
@@ -643,6 +660,7 @@
 				501C284223A976B2007ECE6F /* Jobs.storyboard in Resources */,
 				501C289523AC0E76007ECE6F /* FloatingView.xib in Resources */,
 				5091443723A3C87000E7E791 /* LaunchScreen.storyboard in Resources */,
+				501C289823AC4C72007ECE6F /* SignupOrLoginView.xib in Resources */,
 				501C287423AA3DDE007ECE6F /* CardCollectionViewCell.xib in Resources */,
 				5091443423A3C87000E7E791 /* Assets.xcassets in Resources */,
 			);
@@ -738,6 +756,7 @@
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
 				501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */,
 				501C287C23AA4006007ECE6F /* NibLoadable.swift in Sources */,
+				501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */,
 				50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */,
 				501C284B23A9817B007ECE6F /* Router.swift in Sources */,
 				501C282523A8FE94007ECE6F /* Photo.swift in Sources */,
@@ -775,6 +794,7 @@
 				501C282323A8FE7F007ECE6F /* Client.swift in Sources */,
 				501C288323AA46C7007ECE6F /* CardDetailViewController.swift in Sources */,
 				5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */,
+				501C289A23AC4C8F007ECE6F /* SignupOrLoginView.swift in Sources */,
 				501C286723AA3BDB007ECE6F /* DismissCardAnimator.swift in Sources */,
 				50FA8E3223A684D6007AA792 /* JobsInteractable.swift in Sources */,
 				501C282723A8FEAD007ECE6F /* JobCategory.swift in Sources */,

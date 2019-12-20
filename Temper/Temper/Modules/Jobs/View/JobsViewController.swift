@@ -13,6 +13,16 @@ class JobsViewController: StatusBarAnimatableViewController {
     // MARK: - IBOutlets
     
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak var floatingView: FloatingView! {
+        didSet {
+            floatingView.isHidden = true
+        }
+    }
+    @IBOutlet weak var signupOrLoginView: SignupOrLoginView! {
+        didSet {
+            signupOrLoginView.isHidden = true
+        }
+    }
     
     // MARK: - Properties
     
@@ -92,6 +102,9 @@ extension JobsViewController: JobsViewable {
     func update() {
         endRefreshingIfNeeded()
         collectionView.reloadData()
+        
+        floatingView.isHidden = false
+        signupOrLoginView.isHidden = false 
     }
     
     func showError(error: Error) {

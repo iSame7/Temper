@@ -36,27 +36,38 @@
                                 </cells>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPa-5Y-ZaP" customClass="FloatingView" customModule="Temper" customModuleProvider="target">
-                                <rect key="frame" x="82" y="714" width="250" height="70"/>
+                                <rect key="frame" x="82" y="688" width="250" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="OGU-63-cWy"/>
                                     <constraint firstAttribute="width" constant="250" id="wiP-jd-lgJ"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtg-BI-Bct" customClass="SignupOrLoginView" customModule="Temper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="797" width="414" height="99"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Vtg-BI-Bct" firstAttribute="top" secondItem="YPa-5Y-ZaP" secondAttribute="bottom" constant="39" id="0rV-2v-Lqg"/>
+                            <constraint firstItem="Vtg-BI-Bct" firstAttribute="bottom" secondItem="cQp-dh-9e3" secondAttribute="bottom" id="4bQ-Ng-tre"/>
                             <constraint firstItem="YPa-5Y-ZaP" firstAttribute="centerX" secondItem="cQp-dh-9e3" secondAttribute="centerX" id="7nZ-pc-Rzj"/>
+                            <constraint firstItem="Vtg-BI-Bct" firstAttribute="centerX" secondItem="cQp-dh-9e3" secondAttribute="centerX" id="DbT-oB-Clx"/>
                             <constraint firstItem="hKV-D6-Bqc" firstAttribute="top" secondItem="2uv-D7-xFx" secondAttribute="top" id="E6a-r2-3Nc"/>
                             <constraint firstItem="hKV-D6-Bqc" firstAttribute="leading" secondItem="2uv-D7-xFx" secondAttribute="leading" id="Ean-Bm-X4B"/>
-                            <constraint firstItem="2uv-D7-xFx" firstAttribute="bottom" secondItem="YPa-5Y-ZaP" secondAttribute="bottom" constant="78" id="ND6-dB-wCr"/>
+                            <constraint firstItem="2uv-D7-xFx" firstAttribute="bottom" secondItem="YPa-5Y-ZaP" secondAttribute="bottom" constant="104" id="ND6-dB-wCr"/>
+                            <constraint firstItem="Vtg-BI-Bct" firstAttribute="trailing" secondItem="2uv-D7-xFx" secondAttribute="trailing" id="W2I-cC-f4i"/>
                             <constraint firstItem="2uv-D7-xFx" firstAttribute="trailing" secondItem="hKV-D6-Bqc" secondAttribute="trailing" id="X21-KP-crl"/>
                             <constraint firstItem="2uv-D7-xFx" firstAttribute="bottom" secondItem="hKV-D6-Bqc" secondAttribute="bottom" id="YG5-Uu-Ubr"/>
+                            <constraint firstItem="Vtg-BI-Bct" firstAttribute="leading" secondItem="2uv-D7-xFx" secondAttribute="leading" id="egN-D3-Kvh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2uv-D7-xFx"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="hKV-D6-Bqc" id="nK9-cz-CwQ"/>
+                        <outlet property="floatingView" destination="YPa-5Y-ZaP" id="fJZ-7H-J7S"/>
+                        <outlet property="signupOrLoginView" destination="Vtg-BI-Bct" id="isv-uz-7nR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPF-Bb-zQZ" sceneMemberID="firstResponder"/>
