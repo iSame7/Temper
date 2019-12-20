@@ -32,7 +32,7 @@ class JobsPresenterTests: XCTestCase {
     
     func testGetJobsAndInvokeUpdateWhenNewJobArrives() {
         // Given
-        jobsInteractorMock.stubbedGetJobsCompletionResult = ([Job()], nil)
+        jobsInteractorMock.stubbedGetJobsCompletionResult = ([SectionJob(section: "2019-12-20", jobs: [Job(title: "Vlammers voor achter de bar", location: Location(lat: "52.363728", lng: "4.867635"), maxPossibleEarningsHour: 15.5, jobCategory: JobCategory(description: "Bartending"), shifts: [Shift(startTime: "21:00", endTime: "04:30")], client: Client(name: "LAB111", id: "px79zx", photos: [Photo(formats: [PhotoFormat(cdnUrl: "https://tmpr-photos.ams3.digitaloceanspaces.com/hero/157091.jpg")])]))])], nil)
         
         // When
         sut.getJobs()
@@ -43,7 +43,7 @@ class JobsPresenterTests: XCTestCase {
     
     func testGetJobsAndInvokeErrorWhenNoJobArrives() {
         // Given
-        jobsInteractorMock.stubbedGetJobsCompletionResult = (nil, NSError(domain:"", code: 400, userInfo:nil))
+        jobsInteractorMock.stubbedGetJobsCompletionResult = (nil, TemperError.JSONParsing)
         
         // When
         sut.getJobs()

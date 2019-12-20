@@ -11,8 +11,8 @@
 class JobsInteractorMock: JobsInteractable {
     var invokedGetJobs = false
     var invokedGetJobsCount = 0
-    var stubbedGetJobsCompletionResult: ([Job]?, Error?)?
-    func getJobs(completion: @escaping ([Job]?, Error?) -> Void) {
+    var stubbedGetJobsCompletionResult: ([SectionJob]?, TemperError?)?
+    func getJobsFor(dates: String, completion: @escaping ([SectionJob]?, TemperError?) -> Void) {
         invokedGetJobs = true
         invokedGetJobsCount += 1
         if let result = stubbedGetJobsCompletionResult {

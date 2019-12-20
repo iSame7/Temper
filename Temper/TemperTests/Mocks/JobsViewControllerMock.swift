@@ -10,22 +10,19 @@
 
 import UIKit.UIViewController
 
-class JobsViewControllerMock: UIViewController, JobsViewable {
+class JobsViewControllerMock: UIViewController, JobsViewable {    
     var invokedUpdate = false
     var invokedUpdateCount = 0
-    var invokedUpdateParameters: (jobs: [Job], Void)?
     var invokedUpdateParametersList = [(jobs: [Job], Void)]()
-    func update(_ jobs: [Job]) {
+    func update() {
         invokedUpdate = true
         invokedUpdateCount += 1
-        invokedUpdateParameters = (jobs, ())
-        invokedUpdateParametersList.append((jobs, ()))
     }
     var invokedShowError = false
     var invokedShowErrorCount = 0
-    var invokedShowErrorParameters: (error: Error, Void)?
-    var invokedShowErrorParametersList = [(error: Error, Void)]()
-    func showError(error: Error) {
+    var invokedShowErrorParameters: (error: TemperError, Void)?
+    var invokedShowErrorParametersList = [(error: TemperError, Void)]()
+    func showError(error: TemperError) {
         invokedShowError = true
         invokedShowErrorCount += 1
         invokedShowErrorParameters = (error, ())
