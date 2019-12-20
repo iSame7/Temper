@@ -70,6 +70,11 @@
 		50B0F47523AC691B001860D8 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47423AC691B001860D8 /* Presentable.swift */; };
 		50B0F47723AC69A1001860D8 /* UINavigationController+NavigationControllable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47623AC69A1001860D8 /* UINavigationController+NavigationControllable.swift */; };
 		50B0F47923AC69CD001860D8 /* UIViewController+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47823AC69CD001860D8 /* UIViewController+Presentable.swift */; };
+		50B0F47C23ACC9A0001860D8 /* InAppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47B23ACC9A0001860D8 /* InAppNotification.swift */; };
+		50B0F47E23ACC9AF001860D8 /* InAppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47D23ACC9AF001860D8 /* InAppNotifications.swift */; };
+		50B0F48023ACC9CE001860D8 /* InAppNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F47F23ACC9CE001860D8 /* InAppNotificationType.swift */; };
+		50B0F48223ACC9D9001860D8 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F48123ACC9D9001860D8 /* DeviceManager.swift */; };
+		50B0F48423ACD06F001860D8 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F48323ACD06F001860D8 /* UIColor+Palette.swift */; };
 		50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */; };
 		50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */; };
 		50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */; };
@@ -167,6 +172,11 @@
 		50B0F47423AC691B001860D8 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		50B0F47623AC69A1001860D8 /* UINavigationController+NavigationControllable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+NavigationControllable.swift"; sourceTree = "<group>"; };
 		50B0F47823AC69CD001860D8 /* UIViewController+Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentable.swift"; sourceTree = "<group>"; };
+		50B0F47B23ACC9A0001860D8 /* InAppNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppNotification.swift; sourceTree = "<group>"; };
+		50B0F47D23ACC9AF001860D8 /* InAppNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppNotifications.swift; sourceTree = "<group>"; };
+		50B0F47F23ACC9CE001860D8 /* InAppNotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppNotificationType.swift; sourceTree = "<group>"; };
+		50B0F48123ACC9D9001860D8 /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		50B0F48323ACD06F001860D8 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerMock.swift; sourceTree = "<group>"; };
 		50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsInteractorMock.swift; sourceTree = "<group>"; };
 		50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterTests.swift; sourceTree = "<group>"; };
@@ -224,7 +234,6 @@
 		501C281123A8D90F007ECE6F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				501C288C23ABA2B9007ECE6F /* Protocols */,
 				501C285423AA392A007ECE6F /* Components */,
 				501C281423A8DAC6007ECE6F /* Config */,
 				501C281523A8DACD007ECE6F /* Constants */,
@@ -232,6 +241,7 @@
 				501C281D23A8E763007ECE6F /* Error Handler */,
 				501C281A23A8E577007ECE6F /* Extenstions */,
 				501C282D23A92AEF007ECE6F /* Module */,
+				501C288C23ABA2B9007ECE6F /* Protocols */,
 				501C283423A936BB007ECE6F /* TableView */,
 				501C284323A977DD007ECE6F /* Utils */,
 			);
@@ -257,15 +267,16 @@
 		501C281A23A8E577007ECE6F /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
-				501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */,
-				501C284823A97813007ECE6F /* NSObject+Util.swift */,
-				501C287923AA3F70007ECE6F /* UIView+AutoLayout.swift */,
-				501C287B23AA4006007ECE6F /* NibLoadable.swift */,
 				501C288623AA812A007ECE6F /* Date+Extenstions.swift */,
+				501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */,
+				501C287B23AA4006007ECE6F /* NibLoadable.swift */,
+				501C284823A97813007ECE6F /* NSObject+Util.swift */,
 				501C288823AB142E007ECE6F /* String+Extenstions.swift */,
 				501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */,
 				50B0F47623AC69A1001860D8 /* UINavigationController+NavigationControllable.swift */,
+				501C287923AA3F70007ECE6F /* UIView+AutoLayout.swift */,
 				50B0F47823AC69CD001860D8 /* UIViewController+Presentable.swift */,
+				50B0F48323ACD06F001860D8 /* UIColor+Palette.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -344,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				501C285523AA393B007ECE6F /* Card Transition */,
+				50B0F47A23ACC995001860D8 /* In App Notification */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -506,6 +518,17 @@
 				50B0F47023AC67BC001860D8 /* SignUpRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		50B0F47A23ACC995001860D8 /* In App Notification */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F48123ACC9D9001860D8 /* DeviceManager.swift */,
+				50B0F47B23ACC9A0001860D8 /* InAppNotification.swift */,
+				50B0F47D23ACC9AF001860D8 /* InAppNotifications.swift */,
+				50B0F47F23ACC9CE001860D8 /* InAppNotificationType.swift */,
+			);
+			path = "In App Notification";
 			sourceTree = "<group>";
 		};
 		50CA8EE423A7BC9700A6DF65 /* Mocks */ = {
@@ -810,6 +833,7 @@
 				501C288523AA516A007ECE6F /* SectionHeader.swift in Sources */,
 				50FA8E3923A6892E007AA792 /* JobsService.swift in Sources */,
 				501C289E23AC5A45007ECE6F /* JobsPresenterDelegate.swift in Sources */,
+				50B0F48423ACD06F001860D8 /* UIColor+Palette.swift in Sources */,
 				501C282B23A8FED3007ECE6F /* TemperContent.swift in Sources */,
 				501C286A23AA3D88007ECE6F /* CardContentView.swift in Sources */,
 				501C287623AA3E27007ECE6F /* CardCollectionViewCell.swift in Sources */,
@@ -818,6 +842,7 @@
 				50B0F47323AC68DB001860D8 /* NavigationControllable.swift in Sources */,
 				501C287C23AA4006007ECE6F /* NibLoadable.swift in Sources */,
 				501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */,
+				50B0F47E23ACC9AF001860D8 /* InAppNotifications.swift in Sources */,
 				50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */,
 				50B0F46A23AC63F5001860D8 /* SignUpOrSignInViewController.swift in Sources */,
 				501C284B23A9817B007ECE6F /* Router.swift in Sources */,
@@ -835,6 +860,7 @@
 				501C283A23A96666007ECE6F /* TemperBaseViewController.swift in Sources */,
 				501C289023ABAE11007ECE6F /* PriceShapeView.swift in Sources */,
 				501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */,
+				50B0F48223ACC9D9001860D8 /* DeviceManager.swift in Sources */,
 				501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */,
 				501C286323AA3BB6007ECE6F /* CardTransition.swift in Sources */,
 				501C287823AA3EB7007ECE6F /* CardContentViewModel.swift in Sources */,
@@ -852,6 +878,7 @@
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
 				50B0F47523AC691B001860D8 /* Presentable.swift in Sources */,
 				501C282923A8FEBC007ECE6F /* Shift.swift in Sources */,
+				50B0F47C23ACC9A0001860D8 /* InAppNotification.swift in Sources */,
 				50B0F47923AC69CD001860D8 /* UIViewController+Presentable.swift in Sources */,
 				501C284723A977F5007ECE6F /* StoryboardInstantiatable.swift in Sources */,
 				50B0F46F23AC659E001860D8 /* SignupViewable.swift in Sources */,
@@ -864,6 +891,7 @@
 				5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */,
 				501C289A23AC4C8F007ECE6F /* SignupOrLoginView.swift in Sources */,
 				501C286723AA3BDB007ECE6F /* DismissCardAnimator.swift in Sources */,
+				50B0F48023ACC9CE001860D8 /* InAppNotificationType.swift in Sources */,
 				50FA8E3223A684D6007AA792 /* JobsInteractable.swift in Sources */,
 				501C282723A8FEAD007ECE6F /* JobCategory.swift in Sources */,
 			);

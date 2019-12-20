@@ -7,5 +7,5 @@
 //
 
 protocol JobsInteractable {
-    func getJobsFor(dates: String, completion: @escaping ([SectionJob]?, Error?) -> Void)
+    func getJobsFor(dates: String, completion: @escaping ([SectionJob]?, TemperError?) -> Void)
 }

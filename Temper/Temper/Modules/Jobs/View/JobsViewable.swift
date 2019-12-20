@@ -8,5 +8,5 @@
 
 protocol JobsViewable: Presentable {
     func update()
-    func showError(error: Error)
+    func showError(error: TemperError)
 }

@@ -108,7 +108,12 @@ extension JobsViewController: JobsViewable {
         signupOrLoginView.isHidden = false 
     }
     
-    func showError(error: Error) {
+    func showError(error: TemperError) {
+        if let errorDescription = error.errorDescription, let errorTitle = error.errorUserInfo[NSLocalizedDescriptionKey] as? String {
+            InAppNotifications.showNotification(type: InAppNotifications.error, title: errorTitle, message: errorDescription, dismissDelay: 3)
+        }
+        
+        endRefreshingIfNeeded()
     }
 }
 
