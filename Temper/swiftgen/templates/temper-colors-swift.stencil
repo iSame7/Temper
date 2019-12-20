@@ -1,0 +1,56 @@
+// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+{% if catalogs %}
+{% set enumName %}{{param.enumName|default:"Asset"}}{% endset %}
+{% set colorType %}{{param.colorTypeName|default:"ColorAsset"}}{% endset %}
+{% set colorAlias %}{{param.colorAliasName|default:"UIColor"}}{% endset %}
+{% set forceNamespaces %}{{param.forceProvidesNamespaces|default:"false"}}{% endset %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+
+import UIKit.UIColor
+
+// MARK: - Color Asset catalog
+
+{% macro enumBlock assets %}
+  {% call casesBlock assets %}
+{% endmacro %}
+{% macro casesBlock assets %}
+  {% for asset in assets %}
+  case {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}
+  {% endfor %}
+{% endmacro %}
+{{accessModifier}} enum {{enumName}}: String {
+  {% if catalogs.count > 1 %}
+  {% for catalog in catalogs %}
+  {{accessModifier}} enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% filter indent:4 %}{% call enumBlock catalog.assets %}{% endfilter %}
+  }
+  {% endfor %}
+  {% else %}
+  {% call enumBlock catalogs.first.assets %}
+  {% endif %}
+}
+
+// MARK: - Implementation Details
+
+{{accessModifier}} extension {{enumName}} {
+
+  static let `default` = ColorType.white
+
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
+  {{accessModifier}} var uiColor: {{colorAlias}} {
+    return {{colorAlias}}(colorType: self)
+  }
+}
+
+{{accessModifier}} extension {{colorAlias}} {
+  @available(iOS 11.0, tvOS 11.0, watchOS 4.0, OSX 10.13, *)
+  convenience init!(colorType: {{enumName}}) {
+    let bundle = Bundle(for: BundleToken.self)
+    self.init(named: colorType.rawValue, in: bundle, compatibleWith: nil)
+  }
+}
+
+private final class BundleToken {}
+{% else %}
+// No assets found
+{% endif %}

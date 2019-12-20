@@ -14,20 +14,20 @@ import UIKit
 
 extension CloseBarButtonActionHandling where Self: UIViewController {
     
-    func addCloseBarButtonItem() {
-        navigationItem.rightBarButtonItem = closeBarButtonItem()
+    func addCloseBarButtonItem(imageName: String = Image.Icon.close) {
+        navigationItem.rightBarButtonItem = closeBarButtonItem(imageName: imageName)
     }
     
     func removeCloseBarButtonItem() {
         navigationItem.rightBarButtonItem = nil
     }
     
-    private func closeBarButtonItem() -> UIBarButtonItem {
-        let item = UIBarButtonItem(image: UIImage(named: Image.Icon.close),
-                                   style: .plain,
-                                   target: self,
-                                   action: #selector(closeButtonTapped))
-        item.tintColor = navigationController?.navigationBar.titleTextAttributes?[.foregroundColor] as? UIColor
-        return item
+    private func closeBarButtonItem(imageName: String) -> UIBarButtonItem {
+        let button = UIButton.init(type: .custom)
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        
+        return UIBarButtonItem(customView: button)
     }
 }

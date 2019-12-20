@@ -9,6 +9,9 @@
 import UIKit
 
 protocol Presentable: class {
+    func presentInFullScreen(_ viewController: UIViewController,
+                             animated: Bool,
+    completion: (() -> Void)?)
     func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?)
     func dismiss(animated flag: Bool, completion: (() -> Void)?)
 }

@@ -241,7 +241,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-xn-GHa">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="-16" width="414" height="912"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="U4l-31-7r8">
                                 <rect key="frame" x="0.0" y="769" width="414" height="93"/>
@@ -321,14 +321,13 @@
                             <constraint firstItem="U4l-31-7r8" firstAttribute="leading" secondItem="UwP-kq-xB0" secondAttribute="leading" id="1mr-SO-ksB"/>
                             <constraint firstItem="lRI-xn-GHa" firstAttribute="bottom" secondItem="UwP-kq-xB0" secondAttribute="bottom" constant="34" id="8E3-4t-4r0"/>
                             <constraint firstItem="lRI-xn-GHa" firstAttribute="leading" secondItem="UwP-kq-xB0" secondAttribute="leading" id="ADV-Pp-BdK"/>
-                            <constraint firstItem="lRI-xn-GHa" firstAttribute="top" secondItem="UwP-kq-xB0" secondAttribute="top" constant="-44" id="D0h-DT-lk7"/>
+                            <constraint firstItem="lRI-xn-GHa" firstAttribute="top" secondItem="UwP-kq-xB0" secondAttribute="top" constant="-60" id="D0h-DT-lk7"/>
                             <constraint firstItem="U4l-31-7r8" firstAttribute="trailing" secondItem="UwP-kq-xB0" secondAttribute="trailing" id="M2M-JC-AkN"/>
                             <constraint firstItem="lRI-xn-GHa" firstAttribute="trailing" secondItem="UwP-kq-xB0" secondAttribute="trailing" id="QXt-OR-6bd"/>
                             <constraint firstItem="U4l-31-7r8" firstAttribute="bottom" secondItem="UwP-kq-xB0" secondAttribute="bottom" id="e1S-Bi-55i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UwP-kq-xB0"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="U4l-31-7r8" id="aat-PU-dhL"/>
                         <outlet property="collectionViewLayout" destination="fbU-k6-jfh" id="Q3j-WA-vWp"/>

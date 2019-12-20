@@ -12,7 +12,7 @@ class JobsRouter: Router {
     // MARK: - Properties
     
     private let jobsBuilder: ModuleBuildable?
-    var signUpRouter: Router?
+    var signUpRouter: SignUpRouter?
     var mapRouter: MapRouter?
     
     var window: UIWindow?
@@ -38,12 +38,14 @@ class JobsRouter: Router {
 extension JobsRouter: JobsPresenterDelegate  {
     func didTapSignupButton() {
         if let signUpRouter = signUpRouter {
+            signUpRouter.delegate = self
             startChildRouter(signUpRouter)
         }
     }
     
     func didTapLoginButton() {
         if let signUpRouter = signUpRouter {
+            signUpRouter.delegate = self
             startChildRouter(signUpRouter)
         }
     }
@@ -51,7 +53,24 @@ extension JobsRouter: JobsPresenterDelegate  {
     func didTappMapButton(jobs: [Job]) {
         if let mapRouter = mapRouter {
             mapRouter.jobs = jobs
+            mapRouter.delegate = self
             startChildRouter(mapRouter)
         }
+    }
+}
+
+// MARK: - MapRouterDelegate
+extension JobsRouter: MapRouterDelegate {
+    func mapRouterDidFinish(_ mapRouter: MapRouter) {
+        mapRouter.stop()
+        removeChildRouter(mapRouter)
+    }
+}
+
+// MARK: - SignUpRouterDelegate
+extension JobsRouter: SignUpRouterDelegate {
+    func signupRouterDidFinish(_ signUpRouter: SignUpRouter) {
+        signUpRouter.stop()
+        removeChildRouter(signUpRouter)
     }
 }

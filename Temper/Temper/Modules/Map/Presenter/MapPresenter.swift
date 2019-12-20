@@ -16,6 +16,8 @@ class MapPresenter: MapPresentable {
     
     var jobs: [Job]
     
+    var delegate: MapPresenterDelegate?
+    
     // MARK: - Init
     
     init(mapView: MapViewable, mapInteractor: MapInteractable, jobs: [Job]) {
@@ -61,5 +63,9 @@ class MapPresenter: MapPresentable {
     func viewModelAtIndex(index: Int) -> JobCollectionViewCell.ViewModel {
         let job = jobs[index]
         return JobCollectionViewCell.ViewModel(imageName: job.client.photos.first?.formats?.first?.cdnUrl, title: job.jobCategory.description, subtitle: job.client.name, description: String(format:"€ %.2f", job.maxPossibleEarningsHour))
+    }
+    
+    func closeButtonTapped() {
+        delegate?.didTappCloseButton()
     }
 }

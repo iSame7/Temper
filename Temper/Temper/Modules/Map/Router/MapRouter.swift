@@ -6,12 +6,17 @@
 //  Copyright © 2019 Sameh Mabrouk. All rights reserved.
 //
 
+protocol MapRouterDelegate {
+    func mapRouterDidFinish(_ mapRouter: MapRouter)
+}
+
 class MapRouter: Router {
     // MARK: - Properties
     
     private let mapModuleBuilder: MapModueBuilderBuildable
     private let rootViewController: Presentable
     var jobs: [Job]?
+    var delegate: MapRouterDelegate?
     
     // MARK: - Init
     
@@ -25,5 +30,16 @@ class MapRouter: Router {
             rootViewController.present(mapViewController, animated: true, completion: nil)
         }
     }
+    
+    override func stop() {
+        rootViewController.dismiss(animated: true, completion: nil)
+    }
 }
 
+// MARK: - MapPresenterDelegate
+
+extension MapRouter: MapPresenterDelegate {
+    func didTappCloseButton() {
+        delegate?.mapRouterDidFinish(self)
+    }
+}

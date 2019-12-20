@@ -1,0 +1,10 @@
+input_dir: ../Temper
+output_dir: ../Temper/Resources/Generated/
+
+xcassets:
+  - inputs: Assets.xcassets
+    outputs:
+      - templatePath: templates/temper-images-swift.stencil
+        output: Images.swift
+        params:
+          enumName: Image

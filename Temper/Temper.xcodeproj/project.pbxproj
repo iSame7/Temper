@@ -11,7 +11,7 @@
 		501C281323A8D919007ECE6F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281223A8D919007ECE6F /* Config.swift */; };
 		501C281723A8DAFB007ECE6F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281623A8DAFB007ECE6F /* Constants.swift */; };
 		501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */; };
-		501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */; };
+		501C281C23A8E644007ECE6F /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281B23A8E644007ECE6F /* JSONDecoder+Extensions.swift */; };
 		501C281F23A8E781007ECE6F /* TemperError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C281E23A8E781007ECE6F /* TemperError.swift */; };
 		501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282023A8EDD8007ECE6F /* TemperData.swift */; };
 		501C282323A8FE7F007ECE6F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C282223A8FE7F007ECE6F /* Client.swift */; };
@@ -46,8 +46,8 @@
 		501C288123AA41EB007ECE6F /* StatusBarAnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288023AA41EB007ECE6F /* StatusBarAnimatableViewController.swift */; };
 		501C288323AA46C7007ECE6F /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288223AA46C7007ECE6F /* CardDetailViewController.swift */; };
 		501C288523AA516A007ECE6F /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288423AA516A007ECE6F /* SectionHeader.swift */; };
-		501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288623AA812A007ECE6F /* Date+Extenstions.swift */; };
-		501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288823AB142E007ECE6F /* String+Extenstions.swift */; };
+		501C288723AA812A007ECE6F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288623AA812A007ECE6F /* Date+Extensions.swift */; };
+		501C288923AB142E007ECE6F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288823AB142E007ECE6F /* String+Extensions.swift */; };
 		501C288B23AB9A7B007ECE6F /* SectionJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288A23AB9A7B007ECE6F /* SectionJob.swift */; };
 		501C288E23ABA348007ECE6F /* PullToRefreshActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */; };
 		501C289023ABAE11007ECE6F /* PriceShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C288F23ABAE11007ECE6F /* PriceShapeView.swift */; };
@@ -55,8 +55,13 @@
 		501C289523AC0E76007ECE6F /* FloatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501C289423AC0E76007ECE6F /* FloatingView.xib */; };
 		501C289823AC4C72007ECE6F /* SignupOrLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 501C289723AC4C72007ECE6F /* SignupOrLoginView.xib */; };
 		501C289A23AC4C8F007ECE6F /* SignupOrLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289923AC4C8F007ECE6F /* SignupOrLoginView.swift */; };
-		501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */; };
+		501C289C23AC4DB8007ECE6F /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289B23AC4DB8007ECE6F /* UIButton+Extensions.swift */; };
 		501C289E23AC5A45007ECE6F /* JobsPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501C289D23AC5A45007ECE6F /* JobsPresenterDelegate.swift */; };
+		5041698E23AD3378006DA010 /* MapPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041698D23AD3378006DA010 /* MapPresenterDelegate.swift */; };
+		5041699123AD3E99006DA010 /* SignUpPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699023AD3E99006DA010 /* SignUpPresentable.swift */; };
+		5041699323AD3EBB006DA010 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699223AD3EBB006DA010 /* SignUpPresenter.swift */; };
+		5041699523AD3F4F006DA010 /* SignUpPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699423AD3F4F006DA010 /* SignUpPresenterDelegate.swift */; };
+		5041699723AD441E006DA010 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699623AD441E006DA010 /* UINavigationBar+Extensions.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -89,6 +94,7 @@
 		50B0F4A223ACF798001860D8 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F4A123ACF798001860D8 /* MapInteractor.swift */; };
 		50B0F4A523ACF7C2001860D8 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F4A423ACF7C2001860D8 /* LocationService.swift */; };
 		50B0F4A723AD0A01001860D8 /* CloseBarButtonActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F4A623AD0A01001860D8 /* CloseBarButtonActionHandling.swift */; };
+		50B0F4AB23AD0D8F001860D8 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B0F4AA23AD0D8F001860D8 /* Images.swift */; };
 		50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */; };
 		50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */; };
 		50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */; };
@@ -123,7 +129,7 @@
 		501C281223A8D919007ECE6F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		501C281623A8DAFB007ECE6F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestRetrier.swift; sourceTree = "<group>"; };
-		501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extenstions.swift"; sourceTree = "<group>"; };
+		501C281B23A8E644007ECE6F /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		501C281E23A8E781007ECE6F /* TemperError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperError.swift; sourceTree = "<group>"; };
 		501C282023A8EDD8007ECE6F /* TemperData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperData.swift; sourceTree = "<group>"; };
 		501C282223A8FE7F007ECE6F /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
@@ -158,8 +164,8 @@
 		501C288023AA41EB007ECE6F /* StatusBarAnimatableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarAnimatableViewController.swift; sourceTree = "<group>"; };
 		501C288223AA46C7007ECE6F /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		501C288423AA516A007ECE6F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
-		501C288623AA812A007ECE6F /* Date+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extenstions.swift"; sourceTree = "<group>"; };
-		501C288823AB142E007ECE6F /* String+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extenstions.swift"; sourceTree = "<group>"; };
+		501C288623AA812A007ECE6F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		501C288823AB142E007ECE6F /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		501C288A23AB9A7B007ECE6F /* SectionJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionJob.swift; sourceTree = "<group>"; };
 		501C288D23ABA348007ECE6F /* PullToRefreshActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshActionHandling.swift; sourceTree = "<group>"; };
 		501C288F23ABAE11007ECE6F /* PriceShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceShapeView.swift; sourceTree = "<group>"; };
@@ -167,8 +173,13 @@
 		501C289423AC0E76007ECE6F /* FloatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingView.xib; sourceTree = "<group>"; };
 		501C289723AC4C72007ECE6F /* SignupOrLoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupOrLoginView.xib; sourceTree = "<group>"; };
 		501C289923AC4C8F007ECE6F /* SignupOrLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupOrLoginView.swift; sourceTree = "<group>"; };
-		501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extenstions.swift"; sourceTree = "<group>"; };
+		501C289B23AC4DB8007ECE6F /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		501C289D23AC5A45007ECE6F /* JobsPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterDelegate.swift; sourceTree = "<group>"; };
+		5041698D23AD3378006DA010 /* MapPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterDelegate.swift; sourceTree = "<group>"; };
+		5041699023AD3E99006DA010 /* SignUpPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresentable.swift; sourceTree = "<group>"; };
+		5041699223AD3EBB006DA010 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		5041699423AD3F4F006DA010 /* SignUpPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterDelegate.swift; sourceTree = "<group>"; };
+		5041699623AD441E006DA010 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +216,7 @@
 		50B0F4A123ACF798001860D8 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		50B0F4A423ACF7C2001860D8 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		50B0F4A623AD0A01001860D8 /* CloseBarButtonActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseBarButtonActionHandling.swift; sourceTree = "<group>"; };
+		50B0F4AA23AD0D8F001860D8 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerMock.swift; sourceTree = "<group>"; };
 		50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsInteractorMock.swift; sourceTree = "<group>"; };
 		50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterTests.swift; sourceTree = "<group>"; };
@@ -244,6 +256,7 @@
 		500F2AED23A8C17500CCCAEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				50B0F4A923AD0D1E001860D8 /* Generated */,
 				500F2AEE23A8C1A400CCCAEA /* Config */,
 			);
 			path = Resources;
@@ -295,16 +308,17 @@
 		501C281A23A8E577007ECE6F /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
-				501C288623AA812A007ECE6F /* Date+Extenstions.swift */,
-				501C281B23A8E644007ECE6F /* JSONDecoder+Extenstions.swift */,
+				501C288623AA812A007ECE6F /* Date+Extensions.swift */,
+				501C281B23A8E644007ECE6F /* JSONDecoder+Extensions.swift */,
 				501C287B23AA4006007ECE6F /* NibLoadable.swift */,
 				501C284823A97813007ECE6F /* NSObject+Util.swift */,
-				501C288823AB142E007ECE6F /* String+Extenstions.swift */,
-				501C289B23AC4DB8007ECE6F /* UIButton+Extenstions.swift */,
+				501C288823AB142E007ECE6F /* String+Extensions.swift */,
+				501C289B23AC4DB8007ECE6F /* UIButton+Extensions.swift */,
 				50B0F47623AC69A1001860D8 /* UINavigationController+NavigationControllable.swift */,
 				501C287923AA3F70007ECE6F /* UIView+AutoLayout.swift */,
 				50B0F47823AC69CD001860D8 /* UIViewController+Presentable.swift */,
 				50B0F48323ACD06F001860D8 /* UIColor+Palette.swift */,
+				5041699623AD441E006DA010 /* UINavigationBar+Extensions.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -450,6 +464,16 @@
 			path = "Signup View";
 			sourceTree = "<group>";
 		};
+		5041698F23AD3C7C006DA010 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5041699023AD3E99006DA010 /* SignUpPresentable.swift */,
+				5041699223AD3EBB006DA010 /* SignUpPresenter.swift */,
+				5041699423AD3F4F006DA010 /* SignUpPresenterDelegate.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		5091441E23A3C86F00E7E791 = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +541,7 @@
 		50B0F46623AC618F001860D8 /* Signup  */ = {
 			isa = PBXGroup;
 			children = (
+				5041698F23AD3C7C006DA010 /* Presenter */,
 				50B0F46723AC61BC001860D8 /* Builder */,
 				50B0F46B23AC64DF001860D8 /* Router */,
 				50B0F46823AC61C2001860D8 /* View */,
@@ -586,6 +611,7 @@
 			children = (
 				50B0F48E23ACD683001860D8 /* MapPresentable.swift */,
 				50B0F49A23ACE0C0001860D8 /* MapPresenter.swift */,
+				5041698D23AD3378006DA010 /* MapPresenterDelegate.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -624,6 +650,14 @@
 				50B0F4A423ACF7C2001860D8 /* LocationService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		50B0F4A923AD0D1E001860D8 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				50B0F4AA23AD0D8F001860D8 /* Images.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		50CA8EE423A7BC9700A6DF65 /* Mocks */ = {
@@ -764,6 +798,7 @@
 				5091442423A3C86F00E7E791 /* Frameworks */,
 				5091442523A3C86F00E7E791 /* Resources */,
 				9374CA3918C69A0FD79AF19E /* [CP] Embed Pods Frameworks */,
+				50B0F4A823AD0B3A001860D8 /* Run SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -856,6 +891,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		50B0F4A823AD0B3A001860D8 /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen config run --config swiftgen/swiftgen.yml\n";
+		};
 		6BCC1AF98BFD174862AD26BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -926,10 +979,12 @@
 			files = (
 				501C283F23A972EB007ECE6F /* SharedContainer.swift in Sources */,
 				501C283C23A966C0007ECE6F /* TemperPresentable.swift in Sources */,
+				5041699723AD441E006DA010 /* UINavigationBar+Extensions.swift in Sources */,
 				50FA8E3623A6887F007AA792 /* JobsInteractor.swift in Sources */,
 				501C283123A92B6A007ECE6F /* JobsModuleBuilder.swift in Sources */,
 				501C288523AA516A007ECE6F /* SectionHeader.swift in Sources */,
 				50FA8E3923A6892E007AA792 /* JobsService.swift in Sources */,
+				5041699323AD3EBB006DA010 /* SignUpPresenter.swift in Sources */,
 				50B0F49523ACDD25001860D8 /* MapViewController+UICollectionView.swift in Sources */,
 				50B0F4A523ACF7C2001860D8 /* LocationService.swift in Sources */,
 				501C289E23AC5A45007ECE6F /* JobsPresenterDelegate.swift in Sources */,
@@ -938,11 +993,12 @@
 				501C286A23AA3D88007ECE6F /* CardContentView.swift in Sources */,
 				501C287623AA3E27007ECE6F /* CardCollectionViewCell.swift in Sources */,
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
-				501C288723AA812A007ECE6F /* Date+Extenstions.swift in Sources */,
+				501C288723AA812A007ECE6F /* Date+Extensions.swift in Sources */,
 				50B0F48D23ACD66C001860D8 /* MapViewController.swift in Sources */,
 				50B0F47323AC68DB001860D8 /* NavigationControllable.swift in Sources */,
 				501C287C23AA4006007ECE6F /* NibLoadable.swift in Sources */,
-				501C289C23AC4DB8007ECE6F /* UIButton+Extenstions.swift in Sources */,
+				5041698E23AD3378006DA010 /* MapPresenterDelegate.swift in Sources */,
+				501C289C23AC4DB8007ECE6F /* UIButton+Extensions.swift in Sources */,
 				50B0F47E23ACC9AF001860D8 /* InAppNotifications.swift in Sources */,
 				50FA8E2F23A67E1A007AA792 /* JobsPresentable.swift in Sources */,
 				50B0F46A23AC63F5001860D8 /* SignUpOrSignInViewController.swift in Sources */,
@@ -956,6 +1012,7 @@
 				50B0F49323ACD781001860D8 /* Location.swift in Sources */,
 				50B0F46D23AC64F6001860D8 /* SignUpModuleBuilder.swift in Sources */,
 				50B0F4A723AD0A01001860D8 /* CloseBarButtonActionHandling.swift in Sources */,
+				50B0F4AB23AD0D8F001860D8 /* Images.swift in Sources */,
 				50FA8E2723A67427007AA792 /* JobsViewController.swift in Sources */,
 				50A711E323A81C6900961415 /* NetworkRouter.swift in Sources */,
 				501C282F23A92AFF007ECE6F /* TemperModule.swift in Sources */,
@@ -966,11 +1023,12 @@
 				50B0F49B23ACE0C0001860D8 /* MapPresenter.swift in Sources */,
 				501C284923A97813007ECE6F /* NSObject+Util.swift in Sources */,
 				50B0F48223ACC9D9001860D8 /* DeviceManager.swift in Sources */,
-				501C288923AB142E007ECE6F /* String+Extenstions.swift in Sources */,
+				501C288923AB142E007ECE6F /* String+Extensions.swift in Sources */,
 				501C286323AA3BB6007ECE6F /* CardTransition.swift in Sources */,
 				501C287823AA3EB7007ECE6F /* CardContentViewModel.swift in Sources */,
 				50B0F48F23ACD683001860D8 /* MapPresentable.swift in Sources */,
-				501C281C23A8E644007ECE6F /* JSONDecoder+Extenstions.swift in Sources */,
+				5041699523AD3F4F006DA010 /* SignUpPresenterDelegate.swift in Sources */,
+				501C281C23A8E644007ECE6F /* JSONDecoder+Extensions.swift in Sources */,
 				501C281F23A8E781007ECE6F /* TemperError.swift in Sources */,
 				501C288E23ABA348007ECE6F /* PullToRefreshActionHandling.swift in Sources */,
 				501C289323AC0E6D007ECE6F /* FloatingView.swift in Sources */,
@@ -984,6 +1042,7 @@
 				501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */,
 				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
+				5041699123AD3E99006DA010 /* SignUpPresentable.swift in Sources */,
 				50B0F47523AC691B001860D8 /* Presentable.swift in Sources */,
 				50B0F49123ACD740001860D8 /* JobAnnotation.swift in Sources */,
 				501C282923A8FEBC007ECE6F /* Shift.swift in Sources */,

@@ -9,6 +9,16 @@
 import UIKit
 
 class SignupOrSignInViewController: UIViewController, SignUpViewable {
+    var presenter: SignUpPresentable!
+    
+    // MARK: - Life cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+                
+        navigationController?.navigationBar.transparent()
+        addCloseBarButtonItem(imageName: Image.Icon.closeBlack)
+    }
 }
 
 
@@ -21,5 +31,11 @@ extension SignupOrSignInViewController: StoryboardInstantiatable {
     
     static var storyboardName: String {
         return StoryboardName.jobs.rawValue
+    }
+}
+
+extension SignupOrSignInViewController: CloseBarButtonActionHandling {
+    func closeButtonTapped() {
+        presenter.closeButtonTapped()
     }
 }

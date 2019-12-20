@@ -30,7 +30,8 @@ class MapModueBuilder: MapModueBuilderBuildable {
         registerPresenter(jobs: jobs)
         
         guard let mapViewController = container.resolve(MapViewable.self) as? UIViewController  else { return nil }
-        return Temper.Module(viewController: mapViewController)
+        let navController = UINavigationController(rootViewController: mapViewController)
+        return Temper.Module(viewController: navController)
     }
     
     private func registerLocationService() {
@@ -58,6 +59,10 @@ class MapModueBuilder: MapModueBuilderBuildable {
     private func registerPresenter(jobs: [Job]) {
         container.register(MapPresentable.self, factory: { r in
             MapPresenter(mapView: r.resolve(MapViewable.self)!, mapInteractor: r.resolve(MapInteractable.self)!, jobs: jobs)
+        }).initCompleted({ (r, presenter) in
+            if let presenter = presenter as? MapPresenter {
+                presenter.delegate = r.resolve(MapRouter.self)!
+            }
         }).inObjectScope(.container)
     }
     

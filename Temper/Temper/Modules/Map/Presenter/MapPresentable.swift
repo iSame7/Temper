@@ -16,4 +16,6 @@ protocol MapPresentable: class {
     func annotationsForJobs() -> [JobAnnotation]
     func itemAt(index: Int) -> Job
     func viewModelAtIndex(index: Int) -> JobCollectionViewCell.ViewModel
+    
+    func closeButtonTapped()
 }

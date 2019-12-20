@@ -37,19 +37,11 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addCloseBarButtonItem()
         presenter.viewDidLoad()
-        
         presenter.getJobs()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.transparent()
     }
     
     override func viewDidLayoutSubviews() {
@@ -188,5 +180,12 @@ extension MapViewController {
     struct LocationViewModel {
         let lat: Double
         let lng: Double
+    }
+}
+
+// MARK: - CloseBarButtonActionHandling
+extension MapViewController: CloseBarButtonActionHandling {
+    func closeButtonTapped() {
+        presenter.closeButtonTapped()
     }
 }
