@@ -75,6 +75,10 @@
 		504169D323ADAA4D006DA010 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = 504169D223ADAA4D006DA010 /* default.json */; };
 		504169D623ADBDD1006DA010 /* MapInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169D523ADBDD1006DA010 /* MapInteractorTests.swift */; };
 		504169D823ADBE22006DA010 /* LocationServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169D723ADBE22006DA010 /* LocationServiceMock.swift */; };
+		504169DA23ADBF4C006DA010 /* MapPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169D923ADBF4C006DA010 /* MapPresenterTests.swift */; };
+		504169DC23ADBFE4006DA010 /* MapViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169DB23ADBFE4006DA010 /* MapViewControllerMock.swift */; };
+		504169DE23ADC05D006DA010 /* MapPresenterDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169DD23ADC05D006DA010 /* MapPresenterDelegateSpy.swift */; };
+		504169E023ADC08F006DA010 /* MapInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169DF23ADC08F006DA010 /* MapInteractorMock.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -206,6 +210,10 @@
 		504169D223ADAA4D006DA010 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
 		504169D523ADBDD1006DA010 /* MapInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorTests.swift; sourceTree = "<group>"; };
 		504169D723ADBE22006DA010 /* LocationServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceMock.swift; sourceTree = "<group>"; };
+		504169D923ADBF4C006DA010 /* MapPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterTests.swift; sourceTree = "<group>"; };
+		504169DB23ADBFE4006DA010 /* MapViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerMock.swift; sourceTree = "<group>"; };
+		504169DD23ADC05D006DA010 /* MapPresenterDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterDelegateSpy.swift; sourceTree = "<group>"; };
+		504169DF23ADC08F006DA010 /* MapInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorMock.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -554,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				504169D523ADBDD1006DA010 /* MapInteractorTests.swift */,
+				504169D923ADBF4C006DA010 /* MapPresenterTests.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -757,6 +766,9 @@
 				5041699C23AD6FE7006DA010 /* JobsServiceMock.swift */,
 				50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */,
 				504169D723ADBE22006DA010 /* LocationServiceMock.swift */,
+				504169DB23ADBFE4006DA010 /* MapViewControllerMock.swift */,
+				504169DD23ADC05D006DA010 /* MapPresenterDelegateSpy.swift */,
+				504169DF23ADC08F006DA010 /* MapInteractorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1191,13 +1203,17 @@
 			files = (
 				504169D823ADBE22006DA010 /* LocationServiceMock.swift in Sources */,
 				50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */,
+				504169E023ADC08F006DA010 /* MapInteractorMock.swift in Sources */,
 				504169AB23AD9CBE006DA010 /* DataRequestMock.swift in Sources */,
 				5041699D23AD6FE7006DA010 /* JobsServiceMock.swift in Sources */,
 				50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */,
 				5041699923AD68A3006DA010 /* JobsPresenterDelegateSpy.swift in Sources */,
+				504169DA23ADBF4C006DA010 /* MapPresenterTests.swift in Sources */,
 				504169D623ADBDD1006DA010 /* MapInteractorTests.swift in Sources */,
 				504169A223AD9BB7006DA010 /* SessionManagerMock.swift in Sources */,
+				504169DC23ADBFE4006DA010 /* MapViewControllerMock.swift in Sources */,
 				504169BE23AD9F66006DA010 /* DefaultResponseStore.swift in Sources */,
+				504169DE23ADC05D006DA010 /* MapPresenterDelegateSpy.swift in Sources */,
 				5041699F23AD704B006DA010 /* JobsServiceTests.swift in Sources */,
 				5041699B23AD6B00006DA010 /* JobsInteractorTests.swift in Sources */,
 				50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */,
