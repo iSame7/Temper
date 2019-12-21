@@ -846,8 +846,8 @@
 		50FA8E2B23A67DB7007AA792 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				50FA8E2C23A67DCB007AA792 /* JobsPresenter.swift */,
 				50FA8E2E23A67E1A007AA792 /* JobsPresentable.swift */,
+				50FA8E2C23A67DCB007AA792 /* JobsPresenter.swift */,
 				501C289D23AC5A45007ECE6F /* JobsPresenterDelegate.swift */,
 			);
 			path = Presenter;
