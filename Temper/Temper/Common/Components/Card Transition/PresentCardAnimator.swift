@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PresentCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+class PresentCardAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
     private let params: Params
 

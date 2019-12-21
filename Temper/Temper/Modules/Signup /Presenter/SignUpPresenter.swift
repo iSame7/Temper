@@ -7,7 +7,11 @@
 //
 
 class SignUpPresenter: SignUpPresentable {
+    // MARK: - Properties
+    
     var delegate: SignUpPresenterDelegate?
+    
+    // MARK: - SignUpPresentable
     
     func closeButtonTapped() {
         delegate?.didTappCloseButton()

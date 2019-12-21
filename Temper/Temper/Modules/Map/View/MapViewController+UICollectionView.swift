@@ -9,7 +9,6 @@
 import UIKit
 
 // MARK: - UICollectionViewDataSource
-
 extension MapViewController: UICollectionViewDataSource {
     func configureCollectionViewLayoutItemSize() {
         let inset: CGFloat = calculateSectionInset() // This inset calculation is some magic so the next and the previous cells will peek from the sides. Don't worry about it
@@ -39,7 +38,6 @@ extension MapViewController: UICollectionViewDataSource {
 }
 
 // MARK: - UICollectionViewDelegate
-
 extension MapViewController: UICollectionViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         indexOfCellBeforeDragging = indexOfMajorCell()

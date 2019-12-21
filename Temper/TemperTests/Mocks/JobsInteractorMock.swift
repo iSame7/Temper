@@ -9,13 +9,17 @@
 @testable import Temper
 
 class JobsInteractorMock: JobsInteractable {
-    var invokedGetJobs = false
-    var invokedGetJobsCount = 0
-    var stubbedGetJobsCompletionResult: ([Job]?, Error?)?
-    func getJobs(completion: @escaping ([Job]?, Error?) -> Void) {
-        invokedGetJobs = true
-        invokedGetJobsCount += 1
-        if let result = stubbedGetJobsCompletionResult {
+    var invokedGetJobsFor = false
+    var invokedGetJobsForCount = 0
+    var invokedGetJobsForParameters: (dates: String, Void)?
+    var invokedGetJobsForParametersList = [(dates: String, Void)]()
+    var stubbedGetJobsForCompletionResult: ([SectionJob]?, TemperError?)?
+    func getJobsFor(dates: String, completion: @escaping ([SectionJob]?, TemperError?) -> Void) {
+        invokedGetJobsFor = true
+        invokedGetJobsForCount += 1
+        invokedGetJobsForParameters = (dates, ())
+        invokedGetJobsForParametersList.append((dates, ()))
+        if let result = stubbedGetJobsForCompletionResult {
             completion(result.0, result.1)
         }
     }

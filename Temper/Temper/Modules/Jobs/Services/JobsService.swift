@@ -13,15 +13,14 @@ protocol JobsFetching {
 }
 
 class JobsService: JobsFetching {
-    
     // MARK: - Private properties
     
-    let sessionManager: SessionManager
+    let sessionManager: SessionManagerProtocol
     let requestRetrier: RequestRetrier
     
     // MARK: - Init
     
-    init(sessionManager: SessionManager, requestRetrier: RequestRetrier) {
+    init(sessionManager: SessionManagerProtocol, requestRetrier: RequestRetrier) {
         self.sessionManager = sessionManager
         self.requestRetrier = requestRetrier
     }

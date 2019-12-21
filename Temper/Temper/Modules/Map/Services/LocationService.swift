@@ -49,6 +49,8 @@ extension LocationService {
                 status = CLAuthorizationStatus.restricted
                 guard let validSettingsURL: URL = URL(string: UIApplication.openSettingsURLString) else { return }
                 UIApplication.shared.open(validSettingsURL, options: [:], completionHandler: nil)
+            @unknown default:
+                assertionFailure("Uknown authorizationStatus")
             }
         }
         else {

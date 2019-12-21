@@ -39,11 +39,13 @@ class JobsPresenter: JobsPresentable {
     var delegate: JobsPresenterDelegate?
     
     // MARK: - Init
-    
+
     init(jobsInteractor: JobsInteractable, jobsView: JobsViewable) {
         self.jobsInteractor = jobsInteractor
         self.jobsView = jobsView
     }
+    
+    // MARK: - JobsPresentable
     
     func getJobs() {
         jobsInteractor.getJobsFor(dates: jobDaystoLoad) { [weak self] (jobs, error) in

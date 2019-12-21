@@ -175,9 +175,6 @@ class CardDetailViewController: StatusBarAnimatableViewController, UIScrollViewD
                 didCancelDismissalTransition()
                 return
             }
-            // NOTE:
-            // If user lift fingers -> ended
-            // If gesture.isEnabled -> cancelled
 
             // Ended, Animate back to start
             dismissalAnimator!.pauseAnimation()
@@ -225,6 +222,8 @@ class CardDetailViewController: StatusBarAnimatableViewController, UIScrollViewD
                                          animation: .slide)
     }
 }
+
+// MARK: - UIGestureRecognizerDelegate
 
 extension CardDetailViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
