@@ -12,9 +12,9 @@
 iOS Temper client that display freelancer jobs sectioned by date. Developed using Swift, VIPER and TDD.
 
 <img src="Screenshots/Screenshot-job1.png" alt="Screenshot" width="320px"/>
-<img src="Screenshot-jobs.png" alt="Screenshot" width="320px"/>
-<img src="Screenshot-details.png" alt="Screenshot" width="320px"/>
-<img src="Screenshot-map.png" alt="Screenshot" width="320px"/>
+<img src="Screenshots/Screenshot-jobs.png" alt="Screenshot" width="320px"/>
+<img src="Screenshots/Screenshot-details.png" alt="Screenshot" width="320px"/>
+<img src="Screenshots/Screenshot-map.png" alt="Screenshot" width="320px"/>
 
 ## App Description
 
