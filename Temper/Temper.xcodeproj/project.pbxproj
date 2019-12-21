@@ -73,6 +73,8 @@
 		504169CB23ADA6C0006DA010 /* DataRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169A623AD9C3C006DA010 /* DataRequestProtocol.swift */; };
 		504169CC23ADA6C0006DA010 /* ResponseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169A823AD9C9E006DA010 /* ResponseStore.swift */; };
 		504169D323ADAA4D006DA010 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = 504169D223ADAA4D006DA010 /* default.json */; };
+		504169D623ADBDD1006DA010 /* MapInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169D523ADBDD1006DA010 /* MapInteractorTests.swift */; };
+		504169D823ADBE22006DA010 /* LocationServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169D723ADBE22006DA010 /* LocationServiceMock.swift */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -202,6 +204,8 @@
 		504169AA23AD9CBE006DA010 /* DataRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestMock.swift; sourceTree = "<group>"; };
 		504169BD23AD9F66006DA010 /* DefaultResponseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseStore.swift; sourceTree = "<group>"; };
 		504169D223ADAA4D006DA010 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
+		504169D523ADBDD1006DA010 /* MapInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorTests.swift; sourceTree = "<group>"; };
+		504169D723ADBE22006DA010 /* LocationServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceMock.swift; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -546,6 +550,14 @@
 			path = shifts;
 			sourceTree = "<group>";
 		};
+		504169D423ADBDBE006DA010 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				504169D523ADBDD1006DA010 /* MapInteractorTests.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		5091441E23A3C86F00E7E791 = {
 			isa = PBXGroup;
 			children = (
@@ -605,11 +617,11 @@
 		50A711DD23A7D5A600961415 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				504169A623AD9C3C006DA010 /* DataRequestProtocol.swift */,
 				501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */,
 				50A711E223A81C6900961415 /* NetworkRouter.swift */,
-				504169A423AD9C1F006DA010 /* SessionManagerProtocol.swift */,
-				504169A623AD9C3C006DA010 /* DataRequestProtocol.swift */,
 				504169A823AD9C9E006DA010 /* ResponseStore.swift */,
+				504169A423AD9C1F006DA010 /* SessionManagerProtocol.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -744,6 +756,7 @@
 				5041699823AD68A3006DA010 /* JobsPresenterDelegateSpy.swift */,
 				5041699C23AD6FE7006DA010 /* JobsServiceMock.swift */,
 				50CA8EE723A7BCD800A6DF65 /* JobsViewControllerMock.swift */,
+				504169D723ADBE22006DA010 /* LocationServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -751,6 +764,7 @@
 		50CA8EE523A7BCA300A6DF65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				504169D423ADBDBE006DA010 /* Map */,
 				50CA8EE623A7BCAC00A6DF65 /* Jobs */,
 			);
 			path = Modules;
@@ -1175,11 +1189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504169D823ADBE22006DA010 /* LocationServiceMock.swift in Sources */,
 				50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */,
 				504169AB23AD9CBE006DA010 /* DataRequestMock.swift in Sources */,
 				5041699D23AD6FE7006DA010 /* JobsServiceMock.swift in Sources */,
 				50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */,
 				5041699923AD68A3006DA010 /* JobsPresenterDelegateSpy.swift in Sources */,
+				504169D623ADBDD1006DA010 /* MapInteractorTests.swift in Sources */,
 				504169A223AD9BB7006DA010 /* SessionManagerMock.swift in Sources */,
 				504169BE23AD9F66006DA010 /* DefaultResponseStore.swift in Sources */,
 				5041699F23AD704B006DA010 /* JobsServiceTests.swift in Sources */,
