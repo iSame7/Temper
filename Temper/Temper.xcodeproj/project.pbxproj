@@ -65,6 +65,14 @@
 		5041699923AD68A3006DA010 /* JobsPresenterDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699823AD68A3006DA010 /* JobsPresenterDelegateSpy.swift */; };
 		5041699B23AD6B00006DA010 /* JobsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699A23AD6B00006DA010 /* JobsInteractorTests.swift */; };
 		5041699D23AD6FE7006DA010 /* JobsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699C23AD6FE7006DA010 /* JobsServiceMock.swift */; };
+		5041699F23AD704B006DA010 /* JobsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5041699E23AD704B006DA010 /* JobsServiceTests.swift */; };
+		504169A223AD9BB7006DA010 /* SessionManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169A123AD9BB7006DA010 /* SessionManagerMock.swift */; };
+		504169AB23AD9CBE006DA010 /* DataRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169AA23AD9CBE006DA010 /* DataRequestMock.swift */; };
+		504169BE23AD9F66006DA010 /* DefaultResponseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169BD23AD9F66006DA010 /* DefaultResponseStore.swift */; };
+		504169CA23ADA6C0006DA010 /* SessionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169A423AD9C1F006DA010 /* SessionManagerProtocol.swift */; };
+		504169CB23ADA6C0006DA010 /* DataRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169A623AD9C3C006DA010 /* DataRequestProtocol.swift */; };
+		504169CC23ADA6C0006DA010 /* ResponseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504169A823AD9C9E006DA010 /* ResponseStore.swift */; };
+		504169D323ADAA4D006DA010 /* default.json in Resources */ = {isa = PBXBuildFile; fileRef = 504169D223ADAA4D006DA010 /* default.json */; };
 		5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442A23A3C86F00E7E791 /* AppDelegate.swift */; };
 		5091442D23A3C86F00E7E791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5091442C23A3C86F00E7E791 /* SceneDelegate.swift */; };
 		5091443423A3C87000E7E791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5091443323A3C87000E7E791 /* Assets.xcassets */; };
@@ -186,6 +194,14 @@
 		5041699823AD68A3006DA010 /* JobsPresenterDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsPresenterDelegateSpy.swift; sourceTree = "<group>"; };
 		5041699A23AD6B00006DA010 /* JobsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsInteractorTests.swift; sourceTree = "<group>"; };
 		5041699C23AD6FE7006DA010 /* JobsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsServiceMock.swift; sourceTree = "<group>"; };
+		5041699E23AD704B006DA010 /* JobsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsServiceTests.swift; sourceTree = "<group>"; };
+		504169A123AD9BB7006DA010 /* SessionManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerMock.swift; sourceTree = "<group>"; };
+		504169A423AD9C1F006DA010 /* SessionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManagerProtocol.swift; sourceTree = "<group>"; };
+		504169A623AD9C3C006DA010 /* DataRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestProtocol.swift; sourceTree = "<group>"; };
+		504169A823AD9C9E006DA010 /* ResponseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStore.swift; sourceTree = "<group>"; };
+		504169AA23AD9CBE006DA010 /* DataRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestMock.swift; sourceTree = "<group>"; };
+		504169BD23AD9F66006DA010 /* DefaultResponseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponseStore.swift; sourceTree = "<group>"; };
+		504169D223ADAA4D006DA010 /* default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default.json; sourceTree = "<group>"; };
 		5091442723A3C86F00E7E791 /* Temper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5091442A23A3C86F00E7E791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5091442C23A3C86F00E7E791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -480,6 +496,56 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		504169A323AD9C04006DA010 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				504169AA23AD9CBE006DA010 /* DataRequestMock.swift */,
+				504169BD23AD9F66006DA010 /* DefaultResponseStore.swift */,
+				504169A123AD9BB7006DA010 /* SessionManagerMock.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		504169CD23ADAA06006DA010 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				504169CE23ADAA23006DA010 /* api */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		504169CE23ADAA23006DA010 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				504169CF23ADAA2B006DA010 /* v1 */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		504169CF23ADAA2B006DA010 /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				504169D023ADAA31006DA010 /* contractor */,
+			);
+			path = v1;
+			sourceTree = "<group>";
+		};
+		504169D023ADAA31006DA010 /* contractor */ = {
+			isa = PBXGroup;
+			children = (
+				504169D123ADAA3B006DA010 /* shifts */,
+			);
+			path = contractor;
+			sourceTree = "<group>";
+		};
+		504169D123ADAA3B006DA010 /* shifts */ = {
+			isa = PBXGroup;
+			children = (
+				504169D223ADAA4D006DA010 /* default.json */,
+			);
+			path = shifts;
+			sourceTree = "<group>";
+		};
 		5091441E23A3C86F00E7E791 = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +587,7 @@
 			isa = PBXGroup;
 			children = (
 				5091444323A3C87000E7E791 /* Info.plist */,
+				504169CD23ADAA06006DA010 /* Fixtures */,
 				50CA8EE423A7BC9700A6DF65 /* Mocks */,
 				50CA8EE523A7BCA300A6DF65 /* Modules */,
 			);
@@ -540,6 +607,9 @@
 			children = (
 				501C281823A8E009007ECE6F /* NetworkRequestRetrier.swift */,
 				50A711E223A81C6900961415 /* NetworkRouter.swift */,
+				504169A423AD9C1F006DA010 /* SessionManagerProtocol.swift */,
+				504169A623AD9C3C006DA010 /* DataRequestProtocol.swift */,
+				504169A823AD9C9E006DA010 /* ResponseStore.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -669,6 +739,7 @@
 		50CA8EE423A7BC9700A6DF65 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				504169A323AD9C04006DA010 /* Networking */,
 				50CA8EE923A7BD0400A6DF65 /* JobsInteractorMock.swift */,
 				5041699823AD68A3006DA010 /* JobsPresenterDelegateSpy.swift */,
 				5041699C23AD6FE7006DA010 /* JobsServiceMock.swift */,
@@ -690,6 +761,7 @@
 			children = (
 				5041699A23AD6B00006DA010 /* JobsInteractorTests.swift */,
 				50FA8E2223A59274007AA792 /* JobsPresenterTests.swift */,
+				5041699E23AD704B006DA010 /* JobsServiceTests.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -826,6 +898,7 @@
 				5091443923A3C87000E7E791 /* Sources */,
 				5091443A23A3C87000E7E791 /* Frameworks */,
 				5091443B23A3C87000E7E791 /* Resources */,
+				7950E5FA896675DA3FFAEB9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -894,6 +967,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504169D323ADAA4D006DA010 /* default.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,6 +1012,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7950E5FA896675DA3FFAEB9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TemperTests/Pods-TemperTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TemperTests/Pods-TemperTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TemperTests/Pods-TemperTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9374CA3918C69A0FD79AF19E /* [CP] Embed Pods Frameworks */ = {
@@ -1003,6 +1094,7 @@
 				501C287623AA3E27007ECE6F /* CardCollectionViewCell.swift in Sources */,
 				50FA8E2D23A67DCB007AA792 /* JobsPresenter.swift in Sources */,
 				501C288723AA812A007ECE6F /* Date+Extensions.swift in Sources */,
+				504169CB23ADA6C0006DA010 /* DataRequestProtocol.swift in Sources */,
 				50B0F48D23ACD66C001860D8 /* MapViewController.swift in Sources */,
 				50B0F47323AC68DB001860D8 /* NavigationControllable.swift in Sources */,
 				501C287C23AA4006007ECE6F /* NibLoadable.swift in Sources */,
@@ -1050,6 +1142,7 @@
 				50B0F49723ACDDAC001860D8 /* JobCollectionViewCell.swift in Sources */,
 				501C282123A8EDD8007ECE6F /* TemperData.swift in Sources */,
 				501C281923A8E009007ECE6F /* NetworkRequestRetrier.swift in Sources */,
+				504169CC23ADA6C0006DA010 /* ResponseStore.swift in Sources */,
 				5091442B23A3C86F00E7E791 /* AppDelegate.swift in Sources */,
 				5041699123AD3E99006DA010 /* SignUpPresentable.swift in Sources */,
 				50B0F47523AC691B001860D8 /* Presentable.swift in Sources */,
@@ -1059,6 +1152,7 @@
 				50B0F47C23ACC9A0001860D8 /* InAppNotification.swift in Sources */,
 				50B0F47923AC69CD001860D8 /* UIViewController+Presentable.swift in Sources */,
 				501C284723A977F5007ECE6F /* StoryboardInstantiatable.swift in Sources */,
+				504169CA23ADA6C0006DA010 /* SessionManagerProtocol.swift in Sources */,
 				50B0F46F23AC659E001860D8 /* SignupViewable.swift in Sources */,
 				50FA8E3C23A7A962007AA792 /* Job.swift in Sources */,
 				50B0F49D23ACE144001860D8 /* MapRouter.swift in Sources */,
@@ -1082,9 +1176,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				50CA8EE823A7BCD800A6DF65 /* JobsViewControllerMock.swift in Sources */,
+				504169AB23AD9CBE006DA010 /* DataRequestMock.swift in Sources */,
 				5041699D23AD6FE7006DA010 /* JobsServiceMock.swift in Sources */,
 				50CA8EEA23A7BD0400A6DF65 /* JobsInteractorMock.swift in Sources */,
 				5041699923AD68A3006DA010 /* JobsPresenterDelegateSpy.swift in Sources */,
+				504169A223AD9BB7006DA010 /* SessionManagerMock.swift in Sources */,
+				504169BE23AD9F66006DA010 /* DefaultResponseStore.swift in Sources */,
+				5041699F23AD704B006DA010 /* JobsServiceTests.swift in Sources */,
 				5041699B23AD6B00006DA010 /* JobsInteractorTests.swift in Sources */,
 				50FA8E2323A59274007AA792 /* JobsPresenterTests.swift in Sources */,
 			);

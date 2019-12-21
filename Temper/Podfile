@@ -15,6 +15,7 @@ target 'Temper' do
   target 'TemperTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Alamofire'
   end
 
 end
